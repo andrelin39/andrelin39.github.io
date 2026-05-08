@@ -51,12 +51,26 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/teaching/";
           },
+        },{id: "nav-學習筆記",
+          title: "學習筆記",
+          description: "統計方法、研究設計與 AI 工具的學習紀錄",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/notes/";
+          },
         },{id: "nav-people",
           title: "people",
           description: "members of the lab or group",
           section: "Navigation",
           handler: () => {
             window.location.href = "/people/";
+          },
+        },{id: "nav-心情隨想",
+          title: "心情隨想",
+          description: "研究生涯、醫療現場與日常生活的觀察與感悟",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/thoughts/";
           },
         },{id: "dropdown-bookshelf",
               title: "bookshelf",
@@ -72,7 +86,36 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/blog/";
               },
-            },{id: "post-a-post-with-plotly-js",
+            },{id: "nav-文章分享",
+          title: "文章分享",
+          description: "值得一讀的論文、工具與資源推薦",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/sharing/";
+          },
+        },{id: "post-為什麼在醫院做研究",
+        
+          title: "為什麼在醫院做研究？",
+        
+        description: "從臨床到研究，這條路不好走，但值得走。",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/why-research-in-hospital/";
+          
+        },
+      },{id: "post-p-值與臨床意義-不能只看-p-lt-0-05",
+        
+          title: "P 值與臨床意義：不能只看 p &lt; 0.05",
+        
+        description: "統計顯著性與臨床重要性是兩回事，本文整理常見的誤解與正確解讀方式。",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/p-value-and-clinical-significance/";
+          
+        },
+      },{id: "post-a-post-with-plotly-js",
         
           title: "a post with plotly.js",
         
