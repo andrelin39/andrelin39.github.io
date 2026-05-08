@@ -114,7 +114,12 @@ ninja.data = [{
             },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
           title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
           description: "",
-          section: "News",},{id: "projects-醫療大數據分析流程",
+          section: "News",},{id: "projects-個人學術網站",
+          title: '個人學術網站',
+          description: "以 Jekyll + al-folio 搭建，支援中英雙語切換，部署於 GitHub Pages。",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/1_academic-website/";
+            },},{id: "projects-醫療大數據分析流程",
           title: '醫療大數據分析流程',
           description: "整合 EHR 資料清理、統計分析與視覺化的可重現研究流程。",
           section: "Projects",handler: () => {
