@@ -1,0 +1,6 @@
+exclude:
+  - assets/jupyter/
+
+# 本地開發關閉 imagemagick（Windows 編碼問題 + 非必要）
+imagemagick:
+  enabled: false
