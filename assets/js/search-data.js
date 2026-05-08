@@ -65,18 +65,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/sharing/";
           },
-        },{id: "post-用-claude-code-建立個人學術網站-從挫折到成就感的-ai-agent-體驗",
-        
-          title: "用 Claude Code 建立個人學術網站：從挫折到成就感的 AI Agent 體驗",
-        
-        description: "試過 Hugo、試過 WordPress，都以放棄告終。這次先用 Claude AI 規劃、再用 Claude Code 執行，成就感爆棚。",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2026/building-website-with-claude-code/";
-          
-        },
-      },{id: "post-為什麼在醫院做研究",
+        },{id: "post-為什麼在醫院做研究",
         
           title: "為什麼在醫院做研究？",
         
@@ -96,6 +85,17 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2026/p-value-and-clinical-significance/";
+          
+        },
+      },{id: "post-用-claude-code-建立個人學術網站-從挫折到成就感的-ai-agent-體驗",
+        
+          title: "用 Claude Code 建立個人學術網站:從挫折到成就感的 AI Agent 體驗",
+        
+        description: "紀錄一段以 Claude Code 為協作者、從零搭建學術個人網站的歷程,反思 AI Agent 與傳統對話式 AI 在執行層面的本質差異。",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/claude-code-academic-website/";
           
         },
       },{id: "post-用-chatgpt-輔助系統性文獻回顧-可以做什麼-不能做什麼",
