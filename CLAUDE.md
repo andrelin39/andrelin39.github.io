@@ -58,23 +58,75 @@ featured: false
 2. 新增 BibTeX 條目；若要在首頁顯示，加上 `selected={true}`
 3. `git add _bibliography/papers.bib`、`commit`、`push`
 
-### 新增教材 / 課程
+### 新增專案（research / tools）
 
-1. 在 `_projects/` 建立 `course-slug.md`
-2. 填寫 frontmatter：
+**檔名命名規則**：`{importance}_{slug}.md`，例如 `1_bigdata-pipeline.md`
+- 數字對應 `importance` 欄位（決定同分類內的排序，1 最前）
+- slug 用英文小寫 + 連字號，不含中文
+
+**完整 frontmatter 範本**：
 
 ```yaml
 ---
 layout: page
-title: 課程名稱
-description: 課程簡述
-img: assets/img/course.jpg   # 可選
-importance: 1   # 數字越小越前面
-category: teaching
+title: 中文標題
+title_en: English Title
+description: 中文一行簡述
+description_en: One-line English description
+img: assets/img/projects/filename.png   # 省略則無縮圖
+importance: 1          # 同 category 內排序，數字越小越前
+category: research     # research | teaching | tools
+github: https://github.com/andrelin39/repo   # 選填
 ---
 ```
 
-3. `git add _projects/`、`commit`、`push`
+**Category 可用值**：
+
+| 值 | 顯示（中） | 顯示（英） |
+|----|----------|----------|
+| `research` | 研究專案 | Research Projects |
+| `teaching` | 教學講義 | Teaching Materials |
+| `tools` | 實用工具 | Tools & Scripts |
+
+**圖片規範**：
+- 路徑：`assets/img/projects/` 下，副檔名 `.png` / `.jpg`
+- 建議尺寸：**1200×630 px**（16:9），最小 800×420
+- 暫無圖：直接省略 `img:` 欄位，卡片自動無圖顯示
+- 支援外部 URL（如 GitHub social preview）：直接貼完整 https:// 網址
+
+**雙語內文**：
+
+```markdown
+<div class="lang-zh">
+中文內容（主要功能、技術棧、連結等）
+</div>
+
+<div class="lang-en">
+English content
+</div>
+```
+
+**SOP**：
+1. 在 `_projects/` 新增 `{n}_{slug}.md`（參考 `1_example.md`）
+2. 把縮圖放到 `assets/img/projects/`（選填）
+3. `git add _projects/ assets/img/projects/`、`commit`、`push`
+
+### 新增教材 / 課程
+
+**與新增專案相同流程**，唯一差異：`category: teaching`
+
+```yaml
+---
+layout: page
+title: 課程中文名稱
+title_en: Course English Name
+description: 開課機構 · 修課對象
+description_en: Institution · Target Audience
+img: assets/img/projects/course-thumb.png   # 選填
+importance: 1
+category: teaching
+---
+```
 
 ## 本地預覽
 

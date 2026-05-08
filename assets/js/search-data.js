@@ -25,7 +25,7 @@ ninja.data = [{
           },
         },{id: "nav-projects",
           title: "projects",
-          description: "A growing collection of your cool projects.",
+          description: "Research projects, teaching materials, and practical tools.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
@@ -136,7 +136,12 @@ ninja.data = [{
             },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
           title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
           description: "",
-          section: "News",},{id: "projects-ai-工具應用",
+          section: "News",},{id: "projects-醫療大數據分析流程",
+          title: '醫療大數據分析流程',
+          description: "整合 EHR 資料清理、統計分析與視覺化的可重現研究流程。",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/1_example/";
+            },},{id: "projects-ai-工具應用",
           title: 'AI 工具應用',
           description: "彰化基督教醫院 · 進階培訓課程",
           section: "Projects",handler: () => {
