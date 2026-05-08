@@ -115,6 +115,17 @@ ninja.data = [{
             window.location.href = "/blog/2026/p-value-and-clinical-significance/";
           
         },
+      },{id: "post-用-chatgpt-輔助系統性文獻回顧-可以做什麼-不能做什麼",
+        
+          title: "用 ChatGPT 輔助系統性文獻回顧：可以做什麼、不能做什麼",
+        
+        description: "AI 工具在文獻整理上有真實的幫助，但也有明顯的限制，這篇整理我的實際使用心得。",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/chatgpt-for-systematic-review/";
+          
+        },
       },{id: "post-a-post-with-plotly-js",
         
           title: "a post with plotly.js",
