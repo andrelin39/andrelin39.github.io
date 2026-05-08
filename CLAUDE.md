@@ -10,6 +10,7 @@
 
 ## 技術決策
 
+- **本地開發**：使用 **Ruby + Bundler**，不使用 Docker。啟動指令見下方「本地預覽」節。
 - **已移除 Decap CMS**（commit: `bec69f5c`）：改為純 Markdown 工作流，直接編輯檔案後 push。
 - **部署方式**：push 到 `main` 分支後，GitHub Actions 自動建置並部署，無需手動操作。
 - **未來日期文章**：`_config.yml` 已設定 `future: true`，允許排程文章公開。
@@ -77,19 +78,22 @@ category: teaching
 
 ## 本地預覽
 
+**使用 Ruby + Bundler（不使用 Docker）：**
+
 ```bash
 # 在 al-folio/ 目錄執行
-docker compose pull && docker compose up
-# 瀏覽 http://localhost:8080
+bundle exec jekyll serve --config _config.yml,_config_local.yml
+# 瀏覽 http://localhost:4000
 
-# 強制重建（新增套件或改 Dockerfile 後）
-docker compose up --build
-
-# 停止
-docker compose down
+# 新增 gem 後先執行
+bundle install
 ```
 
-Windows 上若 Docker Desktop 未啟動，先開啟後再執行。
+網址預設為 `http://localhost:4000`，Jekyll 會在儲存檔案後自動 rebuild（watch mode）。
+
+> **注意**：`_config_local.yml` 已設定 `imagemagick: enabled: false`。
+> Windows 中文系統的 ImageMagick 錯誤訊息含非 UTF-8 字元，會讓 Ruby 4.0 崩潰。
+> 本地預覽不需要 webp 轉換，關掉即可正常 build。
 
 ## 部署
 
