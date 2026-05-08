@@ -2,6 +2,7 @@
 layout: default
 permalink: /blog/
 title: blog
+title_zh: 部落格
 nav: true
 nav_order: 1
 pagination:

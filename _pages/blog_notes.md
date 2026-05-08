@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 學習筆記
+title_en: Notes
 permalink: /notes/
 description: 統計方法、研究設計與 AI 工具的學習紀錄
 nav: true

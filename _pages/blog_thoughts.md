@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 心情隨想
+title_en: Thoughts
 permalink: /thoughts/
 description: 研究生涯、醫療現場與日常生活的觀察與感悟
 nav: true

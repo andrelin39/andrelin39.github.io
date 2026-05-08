@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 文章分享
+title_en: Sharing
 permalink: /sharing/
 description: 值得一讀的論文、工具與資源推薦
 nav: true

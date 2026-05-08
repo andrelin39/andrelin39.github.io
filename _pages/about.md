@@ -1,6 +1,7 @@
 ---
 layout: about
 title: about
+title_zh: 關於
 permalink: /
 subtitle: >
   研究員 ·
