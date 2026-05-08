@@ -10,7 +10,7 @@ category: tools
 github: https://github.com/andrelin39/andrelin39.github.io
 ---
 
-<div class="lang-zh">
+<div class="lang-zh" markdown="1">
 
 ## 專案概述
 
@@ -40,7 +40,7 @@ github: https://github.com/andrelin39/andrelin39.github.io
 
 </div>
 
-<div class="lang-en">
+<div class="lang-en" markdown="1">
 
 ## Overview
 

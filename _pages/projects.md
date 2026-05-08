@@ -3,11 +3,11 @@ layout: page
 title: projects
 title_zh: 專案
 permalink: /projects/
-description: Research projects, teaching materials, and practical tools.
-description_zh: 研究專案、教學資源與實用工具。
+description: Research projects and practical tools.
+description_zh: 研究專案與實用工具。
 nav: true
 nav_order: 3
-display_categories: [research, teaching, tools]
+display_categories: [research, tools]
 horizontal: false
 ---
 
