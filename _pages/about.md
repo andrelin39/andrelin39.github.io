@@ -2,16 +2,19 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: >
+  研究員 ·
+  <a href="https://www.cch.org.tw/" target="_blank">彰化基督教醫院</a>
+  大數據暨數位AI應用中心
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>蘭醫師大樓人工智慧發展中心</p>
+    <p>彰化基督教醫院</p>
+    <p>彰化市旭光路135號</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -27,8 +30,6 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+我目前任職於**彰化基督教醫院大數據暨數位AI應用中心**，擔任研究員，專注於醫護大數據分析、臨床研究設計與統計方法應用，並提供論文寫作與投稿策略之專業諮詢。
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
-
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+同時，我於**輔英科技大學**擔任兼任教師，教授生物統計學、醫護文獻選讀、教學原理、醫療經濟學與大數據視覺化分析等課程。
