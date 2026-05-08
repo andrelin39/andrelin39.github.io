@@ -1,8 +1,9 @@
 ---
 layout: page
 title: AI 工具應用
+title_en: AI Tool Application
 description: 彰化基督教醫院 · 進階培訓課程
-img: assets/img/teaching/ai_tools.jpg
+description_en: Changhua Christian Hospital · Advanced Training
 importance: 7
 category: teaching
 ---

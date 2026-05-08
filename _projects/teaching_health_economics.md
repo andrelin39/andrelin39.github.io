@@ -1,8 +1,9 @@
 ---
 layout: page
 title: 醫療經濟學
+title_en: Health Economics
 description: 輔英科技大學 · 護理系大學部
-img: assets/img/teaching/health_economics.jpg
+description_en: Fooyin University · Nursing (Undergraduate)
 importance: 4
 category: teaching
 ---
