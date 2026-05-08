@@ -30,47 +30,69 @@ cv:
     Experience:
       - company: 彰化基督教醫院大數據暨數位AI應用中心
         company_en: Changhua Christian Hospital, Big Data & Digital AI Application Center
-        position: 研究員
-        position_en: Researcher
+        position: 研究員（護理部）
+        position_en: Researcher (Nursing Division)
         location: 彰化市, 台灣
-        start_date: 2020
+        start_date: 2024-05
         end_date: present
-        summary: >
-          負責醫護大數據分析、臨床研究設計、統計方法應用，
-          並提供論文寫作與期刊投稿之專業諮詢服務。
-        summary_en: >
-          Healthcare big data analysis, clinical research design, and statistical methodology.
-          Academic writing consulting and journal submission strategy.
         highlights:
-          - 醫療健康大數據分析
-          - 臨床研究設計與統計
-          - 論文寫作與投稿諮詢
-          - AI 工具應用於醫療研究
+          - 醫療大數據分析與臨床研究設計
+          - 生物統計方法應用
+          - 論文撰寫與期刊投稿諮詢
+          - AI 工具整合至臨床研究工作流程
         highlights_en:
-          - Healthcare Big Data Analytics
-          - Clinical Research Design & Biostatistics
+          - Healthcare Big Data Analytics & Clinical Research Design
+          - Biostatistical Methodology
           - Academic Writing & Journal Submission Consulting
-          - AI Tools for Medical Research
+          - AI Integration into Clinical Research Workflows
 
-      - company: 輔英科技大學
-        company_en: Fooyin University
-        position: 兼任教師
-        position_en: Adjunct Lecturer
+      - company: 康聚醫學科技（股）公司
+        company_en: Kangjun Medical Technology Co., Ltd.
+        position: 行政副理
+        position_en: Administrative Deputy Manager
         location: 台南市, 台灣
-        start_date: 2020
-        end_date: present
-        highlights:
-          - 生物統計學
-          - 醫護文獻選讀
-          - 教學原理
-          - 醫療經濟學
-          - 大數據視覺化分析
-        highlights_en:
-          - Biostatistics
-          - Medical Literature Review
-          - Teaching Principles
-          - Health Economics
-          - Big Data Visualization
+        start_date: 2021-06
+        end_date: 2023-12
+
+      - company: 國立陽明交通大學 產學運籌中心
+        company_en: National Yang Ming Chiao Tung University, Industry-Academia Operations Center
+        position: 產學博士後（科技部產業高階人才培訓計畫）
+        position_en: Industry-Academia Postdoctoral Researcher (NSTC Advanced Talent Program)
+        location: 台灣
+        start_date: 2021-06
+        end_date: 2022-05
+
+      - company: 恆源綠能科技有限公司
+        company_en: Hengyuan Green Energy Technology Co., Ltd.
+        position: 財務營運經理
+        position_en: Financial Operations Manager
+        location: 台灣
+        start_date: 2018-06
+        end_date: 2021-05
+
+      - company: 和勤精機（股）公司
+        company_en: Hocin Precision Machinery Co., Ltd.
+        position: 成本數據中心 經理
+        position_en: Manager, Cost Data Center
+        location: 台灣
+        start_date: 2013-02
+        end_date: 2018-05
+
+      - company: 靜宜大學 統計資訊學系
+        company_en: Providence University, Dept. of Statistics and Information Science
+        position: 兼任助理教授
+        position_en: Adjunct Assistant Professor
+        location: 台中市, 台灣
+        start_date: 2012-09
+        end_date: 2013-01
+
+      - company: 嶺東科技大學 應用外語系
+        company_en: Ling Tung University, Dept. of Applied Foreign Languages
+        position: 兼任講師
+        position_en: Adjunct Lecturer
+        location: 台中市, 台灣
+        start_date: 2012-09
+        end_date: 2013-01
 
     Education:
       - institution: 逢甲大學
