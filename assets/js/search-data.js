@@ -65,11 +65,11 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/sharing/";
           },
-        },{id: "post-用-claude-code-建立個人學術網站-一個研究者的實作紀錄",
+        },{id: "post-用-claude-code-建立個人學術網站-從挫折到成就感的-ai-agent-體驗",
         
-          title: "用 Claude Code 建立個人學術網站：一個研究者的實作紀錄",
+          title: "用 Claude Code 建立個人學術網站：從挫折到成就感的 AI Agent 體驗",
         
-        description: "從零到上線，記錄用 AI 輔助工具建置 Jekyll 個人網站的完整過程，以及這種工作方式帶來的思考。",
+        description: "試過 WordPress、試過跟 AI 對話貼程式碼，都以放棄告終。這次換了玩法，成就感爆棚。",
         section: "Posts",
         handler: () => {
           
