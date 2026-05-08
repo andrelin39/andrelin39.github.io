@@ -1,11 +1,13 @@
 ---
 layout: page
 title: projects
+title_zh: 專案
 permalink: /projects/
-description: A growing collection of your cool projects.
+description: Research projects, teaching materials, and practical tools.
+description_zh: 研究專案、教學資源與實用工具。
 nav: true
 nav_order: 3
-display_categories: [work, fun]
+display_categories: [research, teaching, tools]
 horizontal: false
 ---
 
@@ -15,7 +17,24 @@ horizontal: false
   <!-- Display categorized projects -->
   {% for category in page.display_categories %}
   <a id="{{ category }}" href=".#{{ category }}">
-    <h2 class="category">{{ category }}</h2>
+    <h2 class="category">
+      <span class="lang-zh">
+        {% case category %}
+          {% when 'research' %}研究專案
+          {% when 'teaching' %}教學講義
+          {% when 'tools' %}實用工具
+          {% else %}{{ category }}
+        {% endcase %}
+      </span>
+      <span class="lang-en">
+        {% case category %}
+          {% when 'research' %}Research Projects
+          {% when 'teaching' %}Teaching Materials
+          {% when 'tools' %}Tools &amp; Scripts
+          {% else %}{{ category }}
+        {% endcase %}
+      </span>
+    </h2>
   </a>
   {% assign categorized_projects = site.projects | where: "category", category %}
   {% assign sorted_projects = categorized_projects | sort: "importance" %}
@@ -40,13 +59,9 @@ horizontal: false
 {% else %}
 
 <!-- Display projects without categories -->
-
 {% assign sorted_projects = site.projects | sort: "importance" %}
 
-  <!-- Generate cards for each project -->
-
 {% if page.horizontal %}
-
   <div class="container">
     <div class="row row-cols-1 row-cols-md-2">
     {% for project in sorted_projects %}
