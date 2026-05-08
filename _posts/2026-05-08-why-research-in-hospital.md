@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 為什麼在醫院做研究？
-date: 2026-05-08 10:00:00 +0800
+date: 2026-05-08 08:00:00 +0800
 description: 從臨床到研究，這條路不好走，但值得走。
 tags: 研究生涯 臨床研究
 categories: thoughts

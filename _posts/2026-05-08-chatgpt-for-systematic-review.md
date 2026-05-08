@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 用 ChatGPT 輔助系統性文獻回顧：可以做什麼、不能做什麼
-date: 2026-05-08 11:00:00 +0800
+date: 2026-05-08 08:00:00 +0800
 description: AI 工具在文獻整理上有真實的幫助，但也有明顯的限制，這篇整理我的實際使用心得。
 tags: AI工具 ChatGPT 文獻回顧
 categories: sharing
