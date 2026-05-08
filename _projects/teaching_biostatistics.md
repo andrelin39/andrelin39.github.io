@@ -4,6 +4,7 @@ title: 生物統計學
 title_en: Biostatistics
 description: 輔英科技大學 · 護理系大學部
 description_en: Fooyin University · Nursing (Undergraduate)
+img: assets/img/projects/biostatistics.jpg
 importance: 1
 category: teaching
 ---

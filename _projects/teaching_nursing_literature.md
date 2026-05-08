@@ -4,6 +4,7 @@ title: 醫護文獻選讀
 title_en: Medical Literature Review
 description: 輔英科技大學 · 護理系大學部
 description_en: Fooyin University · Nursing (Undergraduate)
+img: assets/img/projects/nursing_literature.jpg
 importance: 2
 category: teaching
 ---

@@ -4,6 +4,7 @@ title: 大數據視覺化分析
 title_en: Big Data Visualization
 description: 輔英科技大學 · 護理系大學部
 description_en: Fooyin University · Nursing (Undergraduate)
+img: assets/img/projects/bigdata_viz.jpg
 importance: 5
 category: teaching
 ---

@@ -4,6 +4,7 @@ title: 機器學習
 title_en: Machine Learning
 description: 彰化基督教醫院 · 進階培訓課程
 description_en: Changhua Christian Hospital · Advanced Training
+img: assets/img/projects/machine_learning.jpg
 importance: 6
 category: teaching
 ---

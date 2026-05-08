@@ -26,6 +26,7 @@ title: 醫療大數據分析流程
 title_en: Healthcare Big Data Analysis Pipeline
 description: 整合 EHR 資料清理、統計分析與視覺化的可重現研究流程。
 description_en: A reproducible research pipeline integrating EHR data cleaning, statistical analysis, and visualization.
+img: assets/img/projects/example.jpg
 importance: 1
 category: research
 ---

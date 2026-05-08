@@ -4,6 +4,7 @@ title: 教學原理
 title_en: Teaching Principles
 description: 輔英科技大學 · 護理系大學部
 description_en: Fooyin University · Nursing (Undergraduate)
+img: assets/img/projects/pedagogy.jpg
 importance: 3
 category: teaching
 ---
