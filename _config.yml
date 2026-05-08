@@ -168,6 +168,8 @@ collections:
 # Jekyll settings
 # -----------------------------------------------------------------------------
 
+future: true # include posts with future dates (avoids timezone build issues)
+
 # Markdown and syntax highlight
 markdown: kramdown
 highlighter: rouge
