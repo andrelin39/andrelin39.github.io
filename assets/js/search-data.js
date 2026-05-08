@@ -65,7 +65,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/sharing/";
           },
-        },{id: "post-為什麼在醫院做研究",
+        },{id: "post-用-claude-code-建立個人學術網站-一個研究者的實作紀錄",
+        
+          title: "用 Claude Code 建立個人學術網站：一個研究者的實作紀錄",
+        
+        description: "從零到上線，記錄用 AI 輔助工具建置 Jekyll 個人網站的完整過程，以及這種工作方式帶來的思考。",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/building-website-with-claude-code/";
+          
+        },
+      },{id: "post-為什麼在醫院做研究",
         
           title: "為什麼在醫院做研究？",
         
