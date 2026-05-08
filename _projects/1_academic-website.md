@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: project
 title: 個人學術網站
 title_en: Personal Academic Website
 description: 以 Jekyll + al-folio 搭建，支援中英雙語切換，部署於 GitHub Pages。

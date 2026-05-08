@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: project
 title: 教學原理
 title_en: Teaching Principles
 description: 輔英科技大學 · 護理系大學部

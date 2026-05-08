@@ -1,0 +1,66 @@
+---
+layout: default
+---
+<div class="post">
+
+  {%- comment -%} ── Project Header ── {%- endcomment -%}
+  <header class="post-header mb-4">
+
+    {%- comment -%} Title {%- endcomment -%}
+    <h1 class="post-title">
+      {% if page.title_en %}
+        <span class="lang-zh">{{ page.title }}</span>
+        <span class="lang-en">{{ page.title_en }}</span>
+      {% else %}
+        {{ page.title }}
+      {% endif %}
+    </h1>
+
+    {%- comment -%} Description / subtitle {%- endcomment -%}
+    {% if page.description %}
+      <p class="post-description">
+        {% if page.description_en %}
+          <span class="lang-zh">{{ page.description }}</span>
+          <span class="lang-en">{{ page.description_en }}</span>
+        {% else %}
+          {{ page.description }}
+        {% endif %}
+      </p>
+    {% endif %}
+
+    {%- comment -%} Metadata row: category badge + GitHub button {%- endcomment -%}
+    <div class="d-flex flex-wrap align-items-center gap-2 mt-3">
+      {% if page.category %}
+        <span class="badge badge-pill badge-secondary text-capitalize">
+          <span class="lang-zh">
+            {% case page.category %}
+              {% when 'research' %}研究專案
+              {% when 'teaching' %}教學講義
+              {% when 'tools' %}實用工具
+              {% else %}{{ page.category }}
+            {% endcase %}
+          </span>
+          <span class="lang-en">{{ page.category }}</span>
+        </span>
+      {% endif %}
+      {% if page.github %}
+        <a href="{{ page.github }}" target="_blank" rel="noopener noreferrer"
+           class="btn btn-sm btn-outline-dark">
+          <i class="fa-brands fa-github"></i>&nbsp;GitHub
+        </a>
+      {% endif %}
+    </div>
+
+    <hr class="mt-3 mb-0">
+  </header>
+
+  {%- comment -%} ── Main content ── {%- endcomment -%}
+  <article>
+    {{ content }}
+  </article>
+
+  {% if site.giscus and page.giscus_comments %}
+    {% include giscus.liquid %}
+  {% endif %}
+
+</div>

@@ -21,7 +21,7 @@
 # github    : GitHub repo 完整 URL（選填）
 # ============================================================
 
-layout: page
+layout: project
 title: 醫療大數據分析流程
 title_en: Healthcare Big Data Analysis Pipeline
 description: 整合 EHR 資料清理、統計分析與視覺化的可重現研究流程。

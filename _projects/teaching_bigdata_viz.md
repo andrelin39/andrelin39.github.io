@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: project
 title: 大數據視覺化分析
 title_en: Big Data Visualization
 description: 輔英科技大學 · 護理系大學部

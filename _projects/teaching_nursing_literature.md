@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: project
 title: 醫護文獻選讀
 title_en: Medical Literature Review
 description: 輔英科技大學 · 護理系大學部

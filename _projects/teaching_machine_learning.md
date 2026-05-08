@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: project
 title: 機器學習
 title_en: Machine Learning
 description: 彰化基督教醫院 · 進階培訓課程

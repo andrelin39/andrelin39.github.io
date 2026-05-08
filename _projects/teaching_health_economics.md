@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: project
 title: 醫療經濟學
 title_en: Health Economics
 description: 輔英科技大學 · 護理系大學部
