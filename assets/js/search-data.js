@@ -44,9 +44,9 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "nav-teaching",
-          title: "teaching",
-          description: "Course materials, schedules, and resources for classes taught.",
+        },{id: "nav-教學講義",
+          title: "教學講義",
+          description: "課程教材、講義與學習資源。涵蓋生物統計學、醫護文獻選讀、教學原理、醫療經濟學、大數據視覺化分析、機器學習與 AI 工具應用。",
           section: "Navigation",
           handler: () => {
             window.location.href = "/teaching/";
@@ -496,6 +496,41 @@ ninja.data = [{
           description: "another project with an image 🎉",
           section: "Projects",handler: () => {
               window.location.href = "/projects/9_project/";
+            },},{id: "projects-ai-工具應用",
+          title: 'AI 工具應用',
+          description: "彰化基督教醫院 · 進階培訓課程",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/teaching_ai_tools/";
+            },},{id: "projects-大數據視覺化分析",
+          title: '大數據視覺化分析',
+          description: "輔英科技大學 · 護理系大學部",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/teaching_bigdata_viz/";
+            },},{id: "projects-生物統計學",
+          title: '生物統計學',
+          description: "輔英科技大學 · 護理系大學部",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/teaching_biostatistics/";
+            },},{id: "projects-醫療經濟學",
+          title: '醫療經濟學',
+          description: "輔英科技大學 · 護理系大學部",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/teaching_health_economics/";
+            },},{id: "projects-機器學習",
+          title: '機器學習',
+          description: "彰化基督教醫院 · 進階培訓課程",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/teaching_machine_learning/";
+            },},{id: "projects-醫護文獻選讀",
+          title: '醫護文獻選讀',
+          description: "輔英科技大學 · 護理系大學部",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/teaching_nursing_literature/";
+            },},{id: "projects-教學原理",
+          title: '教學原理',
+          description: "輔英科技大學 · 護理系大學部",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/teaching_pedagogy/";
             },},{id: "teachings-data-science-fundamentals",
           title: 'Data Science Fundamentals',
           description: "This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.",
