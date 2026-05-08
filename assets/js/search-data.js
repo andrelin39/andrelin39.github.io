@@ -69,7 +69,7 @@ ninja.data = [{
         
           title: "用 Claude Code 建立個人學術網站：從挫折到成就感的 AI Agent 體驗",
         
-        description: "試過 WordPress、試過跟 AI 對話貼程式碼，都以放棄告終。這次換了玩法，成就感爆棚。",
+        description: "試過 Hugo、試過 WordPress，都以放棄告終。這次先用 Claude AI 規劃、再用 Claude Code 執行，成就感爆棚。",
         section: "Posts",
         handler: () => {
           
