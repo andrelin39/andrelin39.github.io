@@ -65,29 +65,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/sharing/";
           },
-        },{id: "post-為什麼在醫院做研究",
-        
-          title: "為什麼在醫院做研究？",
-        
-        description: "從臨床到研究，這條路不好走，但值得走。",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2026/why-research-in-hospital/";
-          
-        },
-      },{id: "post-p-值與臨床意義-不能只看-p-lt-0-05",
-        
-          title: "P 值與臨床意義：不能只看 p &lt; 0.05",
-        
-        description: "統計顯著性與臨床重要性是兩回事，本文整理常見的誤解與正確解讀方式。",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2026/p-value-and-clinical-significance/";
-          
-        },
-      },{id: "post-用-claude-code-建立個人學術網站-從挫折到成就感的-ai-agent-體驗",
+        },{id: "post-用-claude-code-建立個人學術網站-從挫折到成就感的-ai-agent-體驗",
         
           title: "用 Claude Code 建立個人學術網站:從挫折到成就感的 AI Agent 體驗",
         
@@ -96,17 +74,6 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2026/claude-code-academic-website/";
-          
-        },
-      },{id: "post-用-chatgpt-輔助系統性文獻回顧-可以做什麼-不能做什麼",
-        
-          title: "用 ChatGPT 輔助系統性文獻回顧：可以做什麼、不能做什麼",
-        
-        description: "AI 工具在文獻整理上有真實的幫助，但也有明顯的限制，這篇整理我的實際使用心得。",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2026/chatgpt-for-systematic-review/";
           
         },
       },{id: "post-google-gemini-updates-flash-1-5-gemma-2-and-project-astra",
