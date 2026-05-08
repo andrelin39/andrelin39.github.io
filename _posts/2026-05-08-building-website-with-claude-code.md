@@ -2,7 +2,7 @@
 layout: post
 title: 用 Claude Code 建立個人學術網站：從挫折到成就感的 AI Agent 體驗
 date: 2026-05-08 20:00:00 +0800
-description: 試過 WordPress、試過跟 AI 對話貼程式碼，都以放棄告終。這次換了玩法，成就感爆棚。
+description: 試過 Hugo、試過 WordPress，都以放棄告終。這次先用 Claude AI 規劃、再用 Claude Code 執行，成就感爆棚。
 tags: AI工具 ClaudeCode Jekyll 網站建置
 categories: sharing
 featured: false
@@ -10,7 +10,9 @@ featured: false
 
 老實說，這個網站我「建」過好幾次。
 
-第一次是 WordPress。介面直覺，外掛豐富，但客製化到一定程度就像在跟系統搏鬥——不是跑版就是外掛衝突，最後不了了之。第二次是直接找 Claude AI 對話，請它幫我寫 HTML 和 Jekyll 設定，一段一段貼回去，出錯了再貼錯誤訊息回去問。這個循環讓我覺得自己不是在建網站，而是在當一個很沒效率的複製貼上機器人。
+第一次是找 Claude AI 對話，請它幫我規劃。它推薦了 Hugo + Hugo Academic 主題，部署到 GitHub Pages。聽起來很美好——直到推送的時候開始出問題。Claude AI 叫我去改某些設定檔，但我根本找不到那些檔案在哪裡。我們就這樣在「你去改 X 檔案」「我找不到 X 檔案」之間來回了好幾輪，最後無聲地放棄了。
+
+第二次是 WordPress。介面直覺，外掛豐富，不用管什麼 git。但客製化到一定程度就像在跟系統搏鬥——不是跑版就是外掛衝突，主題一更新又壞掉，折騰半天最後還是不了了之。
 
 這次不一樣了。
 
