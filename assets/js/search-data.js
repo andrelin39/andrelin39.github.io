@@ -119,11 +119,6 @@ ninja.data = [{
           description: "以 Jekyll + al-folio 搭建，支援中英雙語切換，部署於 GitHub Pages。",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_academic-website/";
-            },},{id: "projects-醫療大數據分析流程",
-          title: '醫療大數據分析流程',
-          description: "整合 EHR 資料清理、統計分析與視覺化的可重現研究流程。",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/1_example/";
             },},{id: "projects-ai-工具應用",
           title: 'AI 工具應用',
           description: "彰化基督教醫院 · 進階培訓課程",
