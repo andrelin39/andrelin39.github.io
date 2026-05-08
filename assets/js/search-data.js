@@ -58,13 +58,6 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/notes/";
           },
-        },{id: "nav-people",
-          title: "people",
-          description: "members of the lab or group",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/people/";
-          },
         },{id: "nav-心情隨想",
           title: "心情隨想",
           description: "研究生涯、醫療現場與日常生活的觀察與感悟",
@@ -72,21 +65,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/thoughts/";
           },
-        },{id: "dropdown-bookshelf",
-              title: "bookshelf",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "/books/";
-              },
-            },{id: "dropdown-blog",
-              title: "blog",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "/blog/";
-              },
-            },{id: "nav-文章分享",
+        },{id: "nav-文章分享",
           title: "文章分享",
           description: "值得一讀的論文、工具與資源推薦",
           section: "Navigation",
