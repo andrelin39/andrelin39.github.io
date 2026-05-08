@@ -1,3 +1,11 @@
+<!-- Language preference: set data-lang before render to prevent flash -->
+<script>
+  (function () {
+    var lang = localStorage.getItem('site-lang') || 'zh';
+    document.documentElement.setAttribute('data-lang', lang);
+  })();
+</script>
+
 <!-- Metadata, OpenGraph and Schema.org -->
 {% include metadata.liquid %}
 

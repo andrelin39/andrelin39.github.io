@@ -1,0 +1,27 @@
+// Language toggle: show/hide elements by data-lang on <html>
+html[data-lang="zh"] .lang-en {
+  display: none !important;
+}
+
+html[data-lang="en"] .lang-zh {
+  display: none !important;
+}
+
+// Language toggle button in navbar
+.lang-toggle-btn {
+  background: none;
+  border: 1px solid var(--global-text-color);
+  border-radius: 4px;
+  color: var(--global-text-color);
+  cursor: pointer;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.4;
+  padding: 2px 7px;
+  transition: background-color 0.15s ease, color 0.15s ease;
+
+  &:hover {
+    background-color: var(--global-text-color);
+    color: var(--global-bg-color);
+  }
+}

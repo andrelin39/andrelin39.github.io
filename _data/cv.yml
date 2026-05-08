@@ -1,10 +1,16 @@
 cv:
   name: Chih-Hao Lin（林志豪）
   label: Researcher · Biostatistics · AI Applications
+  label_zh: 研究員 · 生物統計 · AI 應用
   email: andrelin39@gmail.com
   location: Changhua, Taiwan
   image: ""
   summary: >
+    Researcher at Changhua Christian Hospital's Big Data & Digital AI Application Center,
+    specializing in healthcare big data analysis, clinical research design, and statistical methodology.
+    Provides consulting on academic writing and journal submission strategy.
+    Also serves as Adjunct Lecturer at Fooyin University.
+  summary_zh: >
     研究員，任職於彰化基督教醫院大數據暨數位AI應用中心，
     專注於醫護大數據分析、臨床研究設計與統計方法應用，
     並提供論文寫作與投稿策略之專業諮詢。
@@ -19,21 +25,33 @@ cv:
   sections:
     Experience:
       - company: 彰化基督教醫院大數據暨數位AI應用中心
+        company_en: Changhua Christian Hospital, Big Data & Digital AI Application Center
         position: 研究員
+        position_en: Researcher
         location: 彰化市, 台灣
         start_date: 2020
         end_date: present
         summary: >
           負責醫護大數據分析、臨床研究設計、統計方法應用，
           並提供論文寫作與期刊投稿之專業諮詢服務。
+        summary_en: >
+          Healthcare big data analysis, clinical research design, and statistical methodology.
+          Academic writing consulting and journal submission strategy.
         highlights:
           - 醫療健康大數據分析
           - 臨床研究設計與統計
           - 論文寫作與投稿諮詢
           - AI 工具應用於醫療研究
+        highlights_en:
+          - Healthcare Big Data Analytics
+          - Clinical Research Design & Biostatistics
+          - Academic Writing & Journal Submission Consulting
+          - AI Tools for Medical Research
 
       - company: 輔英科技大學
+        company_en: Fooyin University
         position: 兼任教師
+        position_en: Adjunct Lecturer
         location: 台南市, 台灣
         start_date: 2020
         end_date: present
@@ -43,49 +61,70 @@ cv:
           - 教學原理
           - 醫療經濟學
           - 大數據視覺化分析
+        highlights_en:
+          - Biostatistics
+          - Medical Literature Review
+          - Teaching Principles
+          - Health Economics
+          - Big Data Visualization
 
     Education:
       - institution: 逢甲大學
+        institution_en: Feng Chia University
         location: 台中市, 台灣
         url: https://www.fcu.edu.tw/
         area: 經濟學系
+        area_en: Department of Economics
         studyType: 博士
+        studyType_en: Ph.D.
         start_date: 2004
         end_date: 2010
 
     Skills:
       - name: 統計分析
+        name_en: Statistical Analysis
         level: Expert
         icon: fa-solid fa-chart-bar
         keywords: "生物統計、SPSS、R、SAS、迴歸分析、存活分析"
+        keywords_en: "Biostatistics, SPSS, R, SAS, Regression, Survival Analysis"
 
       - name: 機器學習
+        name_en: Machine Learning
         level: Advanced
         icon: fa-solid fa-brain
         keywords: "Python、scikit-learn、分類、迴歸、分群"
+        keywords_en: "Python, scikit-learn, Classification, Regression, Clustering"
 
       - name: AI 工具應用
+        name_en: AI Tool Application
         level: Advanced
         icon: fa-solid fa-robot
         keywords: "ChatGPT、Claude、Prompt Engineering、文獻輔助分析"
+        keywords_en: "ChatGPT, Claude, Prompt Engineering, AI-assisted Literature Analysis"
 
       - name: 大數據視覺化
+        name_en: Big Data Visualization
         level: Advanced
         icon: fa-solid fa-chart-line
         keywords: "Tableau、Power BI、Python Matplotlib、Seaborn"
+        keywords_en: "Tableau, Power BI, Python Matplotlib, Seaborn"
 
     Languages:
       - name: 中文（繁體）
-        summary: 母語
+        summary: 母語 / Native
 
       - name: English
-        summary: 學術閱讀與寫作
+        summary: 學術閱讀與寫作 / Academic reading & writing
 
     Interests:
       - name: 醫療大數據研究
+        name_en: Healthcare Big Data Research
         icon: fa-solid fa-database
         keywords: "臨床資料分析、EHR、大數據、健康資訊"
+        keywords_en: "Clinical Data Analysis, EHR, Big Data, Health Informatics"
 
       - name: AI 在醫療的應用
+        name_en: AI in Healthcare
         icon: fa-solid fa-stethoscope
         keywords: "機器學習、自然語言處理、臨床決策支援"
+        keywords_en: "Machine Learning, NLP, Clinical Decision Support"

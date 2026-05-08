@@ -63,18 +63,32 @@ layout: default
         <!-- Header/Contact Information -->
         {% if cv.name or cv.label or cv.location or cv.email or cv.phone or cv.website %}
           <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">Contact Information</h3>
+            <h3 class="card-title font-weight-medium">
+              <span class="lang-zh">聯絡資訊</span>
+              <span class="lang-en">Contact Information</span>
+            </h3>
             <table class="table table-cv table-sm table-borderless">
               {% if cv.name %}
                 <tr>
-                  <td class="p-1 pr-2 font-weight-bold"><b>Name</b></td>
+                  <td class="p-1 pr-2 font-weight-bold">
+                    <b><span class="lang-zh">姓名</span><span class="lang-en">Name</span></b>
+                  </td>
                   <td class="p-1 pl-2 font-weight-light">{{ cv.name }}</td>
                 </tr>
               {% endif %}
               {% if cv.label %}
                 <tr>
-                  <td class="p-1 pr-2 font-weight-bold"><b>Professional Title</b></td>
-                  <td class="p-1 pl-2 font-weight-light">{{ cv.label }}</td>
+                  <td class="p-1 pr-2 font-weight-bold">
+                    <b><span class="lang-zh">職稱</span><span class="lang-en">Professional Title</span></b>
+                  </td>
+                  <td class="p-1 pl-2 font-weight-light">
+                    {% if cv.label_zh %}
+                      <span class="lang-zh">{{ cv.label_zh }}</span>
+                      <span class="lang-en">{{ cv.label }}</span>
+                    {% else %}
+                      {{ cv.label }}
+                    {% endif %}
+                  </td>
                 </tr>
               {% endif %}
               {% if cv.email %}
@@ -113,10 +127,20 @@ layout: default
         {% endif %}
 
         <!-- Summary -->
-        {% if cv.summary %}
+        {% if cv.summary or cv.summary_zh %}
           <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">Professional Summary</h3>
-            <p>{{ cv.summary | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+            <h3 class="card-title font-weight-medium">
+              <span class="lang-zh">個人簡介</span>
+              <span class="lang-en">Professional Summary</span>
+            </h3>
+            <p>
+              {% if cv.summary_zh %}
+                <span class="lang-zh">{{ cv.summary_zh | markdownify | remove: '<p>' | remove: '</p>' }}</span>
+              {% endif %}
+              {% if cv.summary %}
+                <span class="lang-en">{{ cv.summary | markdownify | remove: '<p>' | remove: '</p>' }}</span>
+              {% endif %}
+            </p>
           </div>
         {% endif %}
 
@@ -129,7 +153,10 @@ layout: default
         {% if combined_experience.size > 0 %}
           <a class="anchor" id="experience"></a>
           <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">Experience</h3>
+            <h3 class="card-title font-weight-medium">
+              <span class="lang-zh">工作經歷</span>
+              <span class="lang-en">Experience</span>
+            </h3>
             <div>
               {% assign entries = combined_experience %}
               {% include cv/experience.liquid %}
@@ -149,7 +176,26 @@ layout: default
 
           <a class="anchor" id="{{ section_title | slugify }}"></a>
           <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">{{ section_title }}</h3>
+            <h3 class="card-title font-weight-medium">
+              <span class="lang-en">{{ section_title }}</span>
+              <span class="lang-zh">
+                {% case section_title %}
+                  {% when 'Education' %}學歷
+                  {% when 'Skills' %}技能
+                  {% when 'Languages' %}語言能力
+                  {% when 'Interests' %}研究興趣
+                  {% when 'Academic Interests' %}研究興趣
+                  {% when 'Awards' %}獎項
+                  {% when 'Honors and Awards' %}獎項
+                  {% when 'Publications' %}論文發表
+                  {% when 'Certificates' %}證照
+                  {% when 'Projects' %}研究計畫
+                  {% when 'Open Source Projects' %}開源專案
+                  {% when 'References' %}推薦人
+                  {% else %}{{ section_title }}
+                {% endcase %}
+              </span>
+            </h3>
             <div>
               {% if section_title == 'Education' %}
                 {% assign entries = section_entries %}
@@ -268,7 +314,10 @@ layout: default
         {% if combined_experience.size > 0 %}
           <a class="anchor" id="experience"></a>
           <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">Experience</h3>
+            <h3 class="card-title font-weight-medium">
+              <span class="lang-zh">工作經歷</span>
+              <span class="lang-en">Experience</span>
+            </h3>
             <div>
               {% assign entries = combined_experience %}
               {% include cv/experience.liquid %}

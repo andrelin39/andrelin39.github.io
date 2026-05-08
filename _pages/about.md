@@ -6,6 +6,10 @@ subtitle: >
   研究員 ·
   <a href="https://www.cch.org.tw/" target="_blank">彰化基督教醫院</a>
   大數據暨數位AI應用中心
+subtitle_en: >
+  Researcher ·
+  <a href="https://www.cch.org.tw/" target="_blank">Changhua Christian Hospital</a>
+  Big Data &amp; Digital AI Application Center
 
 profile:
   align: right
@@ -30,6 +34,18 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
+<div class="lang-zh">
+
 我目前任職於**彰化基督教醫院大數據暨數位AI應用中心**，擔任研究員，專注於醫護大數據分析、臨床研究設計與統計方法應用，並提供論文寫作與投稿策略之專業諮詢。
 
 同時，我於**輔英科技大學**擔任兼任教師，教授生物統計學、醫護文獻選讀、教學原理、醫療經濟學與大數據視覺化分析等課程。
+
+</div>
+
+<div class="lang-en">
+
+I am a Researcher at the **Big Data & Digital AI Application Center, Changhua Christian Hospital**, focusing on healthcare big data analysis, clinical research design, and statistical methodology. I also provide consulting on academic writing and journal submission strategy.
+
+I serve as an Adjunct Lecturer at **Fooyin University**, teaching Biostatistics, Medical Literature Review, Teaching Principles, Health Economics, and Big Data Visualization.
+
+</div>
