@@ -270,6 +270,7 @@ display_categories: ["notes", "thoughts", "sharing"] # categories displayed on t
 scholar:
   last_name: [Lin]
   first_name: [Chih-Hao, C.-H., Chih Hao]
+  full_name: [林志豪]
 
   style: apa
   locale: en
