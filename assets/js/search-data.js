@@ -108,6 +108,11 @@ ninja.data = [{
           description: "以 Jekyll + al-folio 搭建，支援中英雙語切換，部署於 GitHub Pages。",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_academic-website/";
+            },},{id: "projects-跟著資料去救人-ai-醫療資料分析實戰指南",
+          title: '跟著資料去救人——AI × 醫療資料分析實戰指南',
+          description: "結合 AI 工具與醫療大數據，帶領醫療人員從資料到洞見的實戰教學書。",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/1_ai-medical-book/";
             },},{id: "projects-ai-工具應用",
           title: 'AI 工具應用',
           description: "彰化基督教醫院 · 進階培訓課程",
