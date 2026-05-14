@@ -84,6 +84,8 @@
         > em {
           border-bottom: 1px solid;
           font-style: normal;
+          font-weight: bold;
+          color: var(--global-theme-color);
         }
 
         > span.more-authors {
@@ -119,7 +121,10 @@
       }
 
       .badges {
-        padding-bottom: 0.5rem;
+        display: inline-flex;
+        align-items: center;
+        padding-bottom: 0;
+        margin-left: 0.25rem;
         span {
           display: inline-block;
           color: v.$black-color;
