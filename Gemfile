@@ -29,6 +29,10 @@ group :jekyll_plugins do
 end
 
 # Gems for development or external data fetching (outside :jekyll_plugins)
+group :development do
+    gem 'wdm', '>= 0.1.0', :platforms => [:mingw, :x64_mingw, :mswin]
+end
+
 group :other_plugins do
     gem 'css_parser'
     gem 'feedjira'
