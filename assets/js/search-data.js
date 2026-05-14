@@ -65,7 +65,29 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/sharing/";
           },
-        },{id: "post-用-claude-code-建立個人學術網站-從挫折到成就感的-ai-agent-體驗",
+        },{id: "post-三班護病比入法了-但這三件事你該知道",
+        
+          title: "三班護病比入法了，但這三件事你該知道",
+        
+        description: "三班護病比正式入法後，從加州 AB 394 的實證經驗看工資溢價、隱性代價與兩年緩衝期的政策重點。",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/nurse-patient-ratio-three-things/";
+          
+        },
+      },{id: "post-在台灣討論三班護病比前-你該先認識加州-ab-394",
+        
+          title: "在台灣討論三班護病比前，你該先認識加州 AB 394",
+        
+        description: "從加州 AB 394 的二十多年經驗，看護病比入法如何走過政治對抗、司法攻防與實證檢驗。",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/ab-394-nurse-patient-ratio/";
+          
+        },
+      },{id: "post-用-claude-code-建立個人學術網站-從挫折到成就感的-ai-agent-體驗",
         
           title: "用 Claude Code 建立個人學術網站:從挫折到成就感的 AI Agent 體驗",
         
@@ -74,28 +96,6 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2026/claude-code-academic-website/";
-          
-        },
-      },{id: "post-google-gemini-updates-flash-1-5-gemma-2-and-project-astra",
-        
-          title: 'Google Gemini updates: Flash 1.5, Gemma 2 and Project Astra <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
-        
-        description: "We’re sharing updates across our Gemini family of models and a glimpse of Project Astra, our vision for the future of AI assistants.",
-        section: "Posts",
-        handler: () => {
-          
-            window.open("https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/", "_blank");
-          
-        },
-      },{id: "post-displaying-external-posts-on-your-al-folio-blog",
-        
-          title: 'Displaying External Posts on Your al-folio Blog <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
-        
-        description: "",
-        section: "Posts",
-        handler: () => {
-          
-            window.open("https://medium.com/@al-folio/displaying-external-posts-on-your-al-folio-blog-b60a1d241a0a?source=rss-17feae71c3c4------2", "_blank");
           
         },
       },{id: "books-the-godfather",
