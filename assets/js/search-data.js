@@ -118,6 +118,11 @@ ninja.data = [{
           description: "支援 Markdown、標籤分類、本地儲存的瀏覽器便利貼工具，純前端零後端。",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_smart-sticky-notes/";
+            },},{id: "projects-醫療數據診斷工具",
+          title: '醫療數據診斷工具',
+          description: "協助臨床研究者快速診斷數據品質、識別異常值與缺失模式的分析輔助工具。",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/3_diagnostic-analyzer-tool/";
             },},{id: "projects-ai-工具應用",
           title: 'AI 工具應用',
           description: "彰化基督教醫院 · 進階培訓課程",
