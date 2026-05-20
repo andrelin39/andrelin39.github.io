@@ -123,6 +123,11 @@ ninja.data = [{
           description: "協助臨床研究者快速診斷數據品質、識別異常值與缺失模式的分析輔助工具。",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_diagnostic-analyzer-tool/";
+            },},{id: "projects-論文專案管理工具",
+          title: '論文專案管理工具',
+          description: "協助研究者整理論文專案、追蹤閱讀進度與管理研究工作流程的實用工具",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/4_paper-manager/";
             },},{id: "projects-ai-工具應用",
           title: 'AI 工具應用',
           description: "彰化基督教醫院 · 進階培訓課程",
