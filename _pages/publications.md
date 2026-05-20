@@ -20,3 +20,15 @@ nav_order: 2
 {% bibliography %}
 
 </div>
+
+<script>
+  document.querySelectorAll('h2.bibliography').forEach(function (h2) {
+    var ol = h2.nextElementSibling;
+    if (ol && ol.tagName === 'OL') {
+      h2.addEventListener('click', function () {
+        h2.classList.toggle('bib-collapsed');
+        ol.classList.toggle('bib-collapsed');
+      });
+    }
+  });
+</script>

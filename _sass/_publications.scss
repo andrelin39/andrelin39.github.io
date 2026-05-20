@@ -24,11 +24,28 @@
   }
 
   h2.bibliography {
-    color: var(--global-divider-color);
+    color: var(--global-theme-color);
     border-top: 1px solid var(--global-divider-color);
     padding-top: 1rem;
     margin-top: 2rem;
     text-align: right;
+    cursor: pointer;
+    user-select: none;
+
+    &::after {
+      content: ' ▾';
+      font-size: 0.8em;
+      display: inline-block;
+      transition: transform 0.2s ease;
+    }
+
+    &.bib-collapsed::after {
+      content: ' ▸';
+    }
+  }
+
+  ol.bibliography.bib-collapsed {
+    display: none;
   }
 
   ol.bibliography {
