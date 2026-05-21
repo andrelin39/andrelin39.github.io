@@ -9,12 +9,12 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-blog",
-          title: "blog",
-          description: "",
+  },{id: "nav-cv",
+          title: "CV",
+          description: "This is a description of the page. You can modify it in &#39;_pages/cv.md&#39;. You can also change or remove the top pdf download button.",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/blog/";
+            window.location.href = "/cv/";
           },
         },{id: "nav-publications",
           title: "publications",
@@ -30,19 +30,19 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/projects/";
           },
-        },{id: "nav-cv",
-          title: "CV",
-          description: "This is a description of the page. You can modify it in &#39;_pages/cv.md&#39;. You can also change or remove the top pdf download button.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/cv/";
-          },
-        },{id: "nav-教學講義",
-          title: "教學講義",
+        },{id: "nav-教學演講",
+          title: "教學演講",
           description: "課程教材、講義與學習資源。涵蓋生物統計學、醫護文獻選讀、教學原理、醫療經濟學、大數據視覺化分析、機器學習與 AI 工具應用。",
           section: "Navigation",
           handler: () => {
             window.location.href = "/teaching/";
+          },
+        },{id: "nav-blog",
+          title: "blog",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/blog/";
           },
         },{id: "nav-學習筆記",
           title: "學習筆記",
@@ -58,8 +58,8 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/thoughts/";
           },
-        },{id: "nav-文章分享",
-          title: "文章分享",
+        },{id: "nav-精彩連結",
+          title: "精彩連結",
           description: "值得一讀的論文、工具與資源推薦",
           section: "Navigation",
           handler: () => {
@@ -118,16 +118,21 @@ ninja.data = [{
           description: "支援 Markdown、標籤分類、本地儲存的瀏覽器便利貼工具，純前端零後端。",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_smart-sticky-notes/";
-            },},{id: "projects-醫療數據診斷工具",
-          title: '醫療數據診斷工具',
+            },},{id: "projects-醫療數據診斷",
+          title: '醫療數據診斷',
           description: "協助臨床研究者快速診斷數據品質、識別異常值與缺失模式的分析輔助工具。",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_diagnostic-analyzer-tool/";
-            },},{id: "projects-論文專案管理工具",
-          title: '論文專案管理工具',
+            },},{id: "projects-論文專案管理",
+          title: '論文專案管理',
           description: "協助研究者整理論文專案、追蹤閱讀進度與管理研究工作流程的實用工具",
           section: "Projects",handler: () => {
               window.location.href = "/projects/4_paper-manager/";
+            },},{id: "projects-ai質性資料分析",
+          title: 'AI質性資料分析',
+          description: "利用大型語言模型 (LLM) 進行產後護理滿意度問卷的質性資料自動化編碼與分析。",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/research_postpartum-satisfaction-coding/";
             },},{id: "projects-ai-工具應用",
           title: 'AI 工具應用',
           description: "彰化基督教醫院 · 進階培訓課程",
