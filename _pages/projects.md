@@ -1,7 +1,7 @@
 ---
 layout: page
 title: projects
-title_zh: 專案
+title_zh: 專案開發
 permalink: /projects/
 description: Research projects and practical tools.
 description_zh: 研究專案與實用工具。
@@ -48,7 +48,7 @@ horizontal: false
     </div>
   </div>
   {% else %}
-  <div class="row row-cols-1 row-cols-md-3">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-3">
     {% for project in sorted_projects %}
       {% include projects.liquid %}
     {% endfor %}
@@ -70,7 +70,7 @@ horizontal: false
     </div>
   </div>
   {% else %}
-  <div class="row row-cols-1 row-cols-md-3">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-3">
     {% for project in sorted_projects %}
       {% include projects.liquid %}
     {% endfor %}

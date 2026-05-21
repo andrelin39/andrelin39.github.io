@@ -1,6 +1,6 @@
 ---
 layout: project
-title: 醫療數據診斷工具
+title: 醫療數據診斷
 title_en: Medical Data Diagnostic Analyzer
 description: 協助臨床研究者快速診斷數據品質、識別異常值與缺失模式的分析輔助工具。
 description_en: A web-based tool to help clinical researchers quickly diagnose data quality, identify outliers, and examine missing data patterns.

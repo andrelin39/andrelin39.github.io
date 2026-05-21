@@ -1,11 +1,11 @@
 ---
 layout: page
-title: 文章分享
+title: 精彩連結
 title_en: Sharing
 permalink: /sharing/
 description: 值得一讀的論文、工具與資源推薦
 nav: true
-nav_order: 9
+nav_order: 8
 ---
 
 {% assign posts = site.posts | where_exp: "post", "post.categories contains 'sharing'" | sort: "date" | reverse %}

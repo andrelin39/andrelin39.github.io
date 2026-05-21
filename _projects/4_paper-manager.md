@@ -1,6 +1,6 @@
 ---
 layout: project
-title: "論文專案管理工具"
+title: "論文專案管理"
 title_en: "Paper Project Manager"
 description: "協助研究者整理論文專案、追蹤閱讀進度與管理研究工作流程的實用工具"
 description_en: "A practical tool for organizing paper projects, tracking reading progress, and managing research workflows."

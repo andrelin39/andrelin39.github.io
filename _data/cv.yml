@@ -5,20 +5,20 @@ cv:
   email: andrelin39@gmail.com
   location: Changhua, Taiwan
   image: ""
-  summary: >
-    Researcher at the Big Data & Digital AI Application Center, Changhua Christian Hospital,
-    and Adjunct Lecturer at Fooyin University.
-    Specializes in healthcare big data analytics, clinical research design, biostatistics,
-    and the integration of AI into clinical research workflows.
-    Provides ongoing support to medical research teams in data analysis, methodology planning,
-    and academic manuscript preparation.
-    Current research focuses on applying large language models to systematic review automation,
-    data extraction, and research quality assessment.
-  summary_zh: >
-    任職於彰化基督教醫院大數據暨數位AI應用中心（研究員）及輔英科技大學（兼任教師）。
-    專注於醫療大數據分析、臨床研究設計、生物統計方法，以及 AI 於臨床研究的整合應用。
-    長期協助醫療研究團隊進行資料分析、研究方法規劃與學術論文撰寫。
-    目前研究方向著重於將大型語言模型整合至系統性文獻回顧、資料擷取自動化與研究品質評估等工作流程。
+#  summary: >
+#    Researcher at the Big Data & Digital AI Application Center, Changhua Christian Hospital,
+#    and Adjunct Lecturer at Fooyin University.
+#    Specializes in healthcare big data analytics, clinical research design, biostatistics,
+#    and the integration of AI into clinical research workflows.
+#    Provides ongoing support to medical research teams in data analysis, methodology planning,
+#    and academic manuscript preparation.
+#    Current research focuses on applying large language models to systematic review automation,
+#    data extraction, and research quality assessment.
+#  summary_zh: >
+#    任職於彰化基督教醫院大數據暨數位AI應用中心（研究員）及輔英科技大學（兼任教師）。
+#    專注於醫療大數據分析、臨床研究設計、生物統計方法，以及 AI 於臨床研究的整合應用。
+#    長期協助醫療研究團隊進行資料分析、研究方法規劃與學術論文撰寫。
+#    目前研究方向著重於將大型語言模型整合至系統性文獻回顧、資料擷取自動化與研究品質評估等工作流程。
 
   social_networks:
     - network: GitHub
@@ -135,22 +135,22 @@ cv:
         keywords: "Tableau、Power BI、Python Matplotlib、Seaborn"
         keywords_en: "Tableau, Power BI, Python Matplotlib, Seaborn"
 
-    Languages:
-      - name: 中文（繁體）
-        summary: 母語 / Native
-
-      - name: English
-        summary: 學術閱讀與寫作 / Academic reading & writing
-
-    Interests:
-      - name: 醫療大數據研究
-        name_en: Healthcare Big Data Research
-        icon: fa-solid fa-database
-        keywords: "臨床資料分析、EHR、大數據、健康資訊"
-        keywords_en: "Clinical Data Analysis, EHR, Big Data, Health Informatics"
-
-      - name: AI 在醫療的應用
-        name_en: AI in Healthcare
-        icon: fa-solid fa-stethoscope
-        keywords: "機器學習、自然語言處理、臨床決策支援"
-        keywords_en: "Machine Learning, NLP, Clinical Decision Support"
+#    Languages:
+#      - name: 中文（繁體）
+#        summary: 母語 / Native
+#
+#      - name: English
+#        summary: 學術閱讀與寫作 / Academic reading & writing
+#
+#    Interests:
+#      - name: 醫療大數據研究
+#        name_en: Healthcare Big Data Research
+#        icon: fa-solid fa-database
+#        keywords: "臨床資料分析、EHR、大數據、健康資訊"
+#        keywords_en: "Clinical Data Analysis, EHR, Big Data, Health Informatics"
+#
+#      - name: AI 在醫療的應用
+#        name_en: AI in Healthcare
+#        icon: fa-solid fa-stethoscope
+#        keywords: "機器學習、自然語言處理、臨床決策支援"
+#        keywords_en: "Machine Learning, NLP, Clinical Decision Support"

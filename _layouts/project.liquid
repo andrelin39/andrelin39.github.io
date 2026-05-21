@@ -46,7 +46,13 @@ layout: default
       {% if page.github %}
         <a href="{{ page.github }}" target="_blank" rel="noopener noreferrer"
            class="btn btn-sm btn-outline-dark">
-          <i class="fa-brands fa-github"></i>&nbsp;GitHub
+          GitHub
+        </a>
+      {% endif %}
+      {% if page.google_drive %}
+        <a href="{{ page.google_drive }}" target="_blank" rel="noopener noreferrer"
+           class="btn btn-sm btn-outline-dark">
+          Google Drive
         </a>
       {% endif %}
     </div>

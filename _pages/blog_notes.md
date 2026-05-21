@@ -5,7 +5,7 @@ title_en: Notes
 permalink: /notes/
 description: 統計方法、研究設計與 AI 工具的學習紀錄
 nav: true
-nav_order: 7
+nav_order: 6
 ---
 
 {% assign posts = site.posts | where_exp: "post", "post.categories contains 'notes'" | sort: "date" | reverse %}

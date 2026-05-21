@@ -39,6 +39,13 @@
                   {% endif %}
                 </div>
               {% endif %}
+              {% if project.google_drive %}
+                <div class="google-drive-icon ml-2">
+                  <div class="icon" data-toggle="tooltip" title="Google Drive">
+                    <a href="{{ project.google_drive }}"><i class="fa-solid fa-hard-drive"></i></a>
+                  </div>
+                </div>
+              {% endif %}
             </div>
           </div>
         </div>
