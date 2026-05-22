@@ -1,0 +1,133 @@
+courses:
+
+  # ── 統計與研究方法 ──────────────────────────────────────
+  - course_id: 113-1-biostat
+    title: 生物統計學
+    title_en: Biostatistics
+    semester: "113 學年度上學期"
+    semester_en: "Fall 2024"
+    school: 輔英科技大學
+    department: 進修部二技護理系
+    subject_category: 統計與研究方法
+    subject_category_en: "Statistics & Research Methods"
+    status: archived
+    drive_folder: "https://drive.google.com/drive/folders/1vHqHWQ4dSLPkTP0jZGyZskPu-g1qfeHa?usp=drive_link"
+    syllabus_link:
+    description: "介紹生物醫學與護理研究常用的統計方法，涵蓋敘述統計、推論統計、假設檢定、ANOVA 及迴歸分析。透過 SPSS 與 R 實作，培養學生獨立分析臨床資料的能力。"
+    topics: [敘述統計, 推論統計, 假設檢定, ANOVA, 迴歸分析]
+    tools: [SPSS, R]
+
+  - course_id: 114-1-biostat
+    title: 生物統計學
+    title_en: Biostatistics
+    semester: "114 學年度上學期"
+    semester_en: "Fall 2025"
+    school: 輔英科技大學
+    department: 進修部二技護理系
+    subject_category: 統計與研究方法
+    subject_category_en: "Statistics & Research Methods"
+    status: archived
+    drive_folder: "https://drive.google.com/drive/folders/1yCaUxj7LBuMSkemYLeF1wJYgdGIjobv6?usp=drive_link"
+    syllabus_link:
+    description: "介紹生物醫學與護理研究常用的統計方法，涵蓋敘述統計、推論統計、假設檢定、ANOVA 及迴歸分析。透過 SPSS 與 R 實作，培養學生獨立分析臨床資料的能力。"
+    topics: [敘述統計, 推論統計, 假設檢定, ANOVA, 迴歸分析]
+    tools: [SPSS, R]
+
+  - course_id: 114-S-bigdata-viz
+    title: 大數據視覺化
+    title_en: Big Data Visualization
+    semester: "114 學年度暑期"
+    semester_en: "Summer 2026"
+    school: 輔英科技大學
+    department: 進修部二技護理系
+    subject_category: 統計與研究方法
+    subject_category_en: "Statistics & Research Methods"
+    status: upcoming
+    drive_folder: "https://drive.google.com/drive/folders/1hiZ5UWpLIjIhktHjvUV9EthgAS03aCqV?usp=drive_link"
+    syllabus_link:
+    description: "介紹健康醫療大數據的視覺化技術，涵蓋 R 與 Python 視覺化套件及 Tableau 互動式儀表板，培養學生以視覺化方式呈現與溝通健康數據洞察的能力。"
+    topics: [大數據分析, 資料視覺化, 互動式圖表, 健康數據應用]
+    tools: [R, Python, Tableau]
+
+  - course_id: 115-2-bigdata-viz
+    title: 大數據視覺化
+    title_en: Big Data Visualization
+    semester: "115 學年度下學期"
+    semester_en: "Spring 2027"
+    school: 輔英科技大學
+    department: 進修部二技護理系
+    subject_category: 統計與研究方法
+    subject_category_en: "Statistics & Research Methods"
+    status: upcoming
+    drive_folder:
+    syllabus_link:
+    description: "介紹健康醫療大數據的視覺化技術，涵蓋 R 與 Python 視覺化套件及 Tableau 互動式儀表板，培養學生以視覺化方式呈現與溝通健康數據洞察的能力。"
+    topics: [大數據分析, 資料視覺化, 互動式圖表, 健康數據應用]
+    tools: [R, Python, Tableau]
+
+  # ── 護理與醫學 ──────────────────────────────────────────
+  - course_id: 113-S-med-lit
+    title: 醫護文獻選讀
+    title_en: Medical and Nursing Literature Reading
+    semester: "113 學年度暑期"
+    semester_en: "Summer 2025"
+    school: 輔英科技大學
+    department: 進修部二技護理系
+    subject_category: 護理與醫學
+    subject_category_en: "Nursing & Medicine"
+    status: archived
+    drive_folder: "https://drive.google.com/drive/folders/1LIdGgKJSKCCnIlZXMvcTKTknkaE1Iujf?usp=drive_link"
+    syllabus_link:
+    description: "訓練學生運用 PubMed 與 CINAHL 檢索醫護英文文獻，並評讀研究設計、統計結果與臨床應用價值。以 Evidence-Based Practice（EBP）為主軸，建立文獻批判性閱讀能力。"
+    topics: [文獻搜尋, 研究設計辨識, 統計解讀, EBP]
+    tools: [PubMed, CINAHL]
+
+  # ── 教育與教學 ──────────────────────────────────────────
+  - course_id: 114-1-pedagogy
+    title: 教學原理與方法
+    title_en: Principles and Methods of Teaching
+    semester: "114 學年度上學期"
+    semester_en: "Fall 2025"
+    school: 輔英科技大學
+    department: 進修部二技護理系
+    subject_category: 教育與教學
+    subject_category_en: "Education & Teaching"
+    status: archived
+    drive_folder: "https://drive.google.com/drive/folders/11w4Ghsn_4g-KXPjqtJWBvaaHTWupnUg4?usp=drive_link"
+    syllabus_link:
+    description: "探討護理教育的教學設計原理、課程規劃與學習評量，並介紹翻轉教室、案例教學、模擬教學等現代教學策略。協助學生建立系統性教學思維，為臨床或學校的教師角色做準備。"
+    topics: [教學設計, 課程規劃, 教學評量, 翻轉教室, 模擬教學]
+    tools: []
+
+  # ── 健康政策與經濟 ──────────────────────────────────────
+  - course_id: 114-2-health-econ
+    title: 醫療經濟學
+    title_en: Health Economics
+    semester: "114 學年度下學期"
+    semester_en: "Spring 2026"
+    school: 輔英科技大學
+    department: 進修部二技護理系
+    subject_category: 健康政策與經濟
+    subject_category_en: "Health Policy & Economics"
+    status: active
+    drive_folder: "https://drive.google.com/drive/folders/1eHBKNv5hYK3_OR222OQc-AhUQnTgmwfz?usp=drive_link"
+    syllabus_link:
+    description: "介紹醫療服務的供需理論、健康保險制度與資源配置，結合台灣全民健保實例分析衛生政策的經濟學邏輯。培養學生以經濟學視角理解醫療體系的運作與改革方向。"
+    topics: [供需分析, 健康保險, 資源配置, 衛生政策]
+    tools: []
+
+  - course_id: 115-1-health-econ
+    title: 醫療經濟學
+    title_en: Health Economics
+    semester: "115 學年度上學期"
+    semester_en: "Fall 2026"
+    school: 輔英科技大學
+    department: 進修部二技護理系
+    subject_category: 健康政策與經濟
+    subject_category_en: "Health Policy & Economics"
+    status: upcoming
+    drive_folder:
+    syllabus_link:
+    description: "介紹醫療服務的供需理論、健康保險制度與資源配置，結合台灣全民健保實例分析衛生政策的經濟學邏輯。培養學生以經濟學視角理解醫療體系的運作與改革方向。"
+    topics: [供需分析, 健康保險, 資源配置, 衛生政策]
+    tools: []
