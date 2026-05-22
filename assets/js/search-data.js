@@ -32,7 +32,7 @@ ninja.data = [{
           },
         },{id: "nav-教學演講",
           title: "教學演講",
-          description: "課程教材、講義與學習資源。涵蓋生物統計學、醫護文獻選讀、教學原理、醫療經濟學、大數據視覺化分析、機器學習與 AI 工具應用。",
+          description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/teaching/";
