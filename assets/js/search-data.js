@@ -30,14 +30,21 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/projects/";
           },
-        },{id: "nav-教學演講",
-          title: "教學演講",
-          description: "",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/teaching/";
-          },
-        },{id: "nav-blog",
+        },{id: "dropdown-課程",
+              title: "課程",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/teaching/";
+              },
+            },{id: "dropdown-演講",
+              title: "演講",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/talks/";
+              },
+            },{id: "nav-blog",
           title: "blog",
           description: "",
           section: "Navigation",
