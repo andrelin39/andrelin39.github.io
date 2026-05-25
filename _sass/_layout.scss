@@ -61,13 +61,58 @@ body.sticky-bottom-footer {
  * About page
  ******************************************************************************/
 
-// English name subtitle (below h1, above .desc)
-.name-subtitle {
-  font-size: 1.125rem;
-  color: #6B7280;
+// Inline bilingual name: 林志豪 Chih-Hao Lin on the same line
+.name-main {
+  font-weight: 700;
+}
+
+.name-secondary {
+  font-size: 0.52em;       // ~22-24px relative to h1
   font-weight: 400;
-  margin-top: -0.4rem;
-  margin-bottom: 0.25rem;
+  color: #6B7280;
+  margin-left: 1rem;
+  display: inline-block;
+  vertical-align: baseline; // align to main name's text baseline
+}
+
+// About top: flex row — text (left, ~65%) + photo (right, ~32%)
+.about-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;               // 48px between text and photo
+}
+
+.about-top-text {
+  flex: 1;
+  min-width: 0;            // allow shrinking below content size
+}
+
+.about-top-photo {
+  flex-shrink: 0;
+  width: 32%;
+  max-width: 280px;
+
+  figure {
+    margin: 0;             // reset browser-default figure margin
+  }
+
+  img {
+    width: 100%;
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  .about-top {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .about-top-photo {
+    width: 65%;
+    max-width: 220px;
+    align-self: center;
+  }
 }
 
 // Info grid (research interests / current focus / office)
@@ -130,4 +175,15 @@ body.sticky-bottom-footer {
   text-transform: none !important;
   margin-bottom: 1.5rem;
   color: var(--global-text-color);
+}
+
+// Homepage-only section spacing (narrower than other pages)
+.home-page {
+  .about-section-block {
+    margin-top: 3.5rem;    // 56px — only applied on the homepage
+  }
+
+  .about-social {
+    margin-top: 2.75rem;   // 44px
+  }
 }
