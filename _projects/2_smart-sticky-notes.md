@@ -5,7 +5,12 @@ title_en: Smart Sticky Notes
 description: 支援 Markdown、標籤分類、本地儲存的瀏覽器便利貼工具，純前端零後端。
 description_en: A browser-based sticky notes app with Markdown support, tag filtering, and local storage — fully frontend, no backend required.
 importance: 2
+year: 2026
 category: tools
+status: completed
+project_type: tool
+type_label: 實用工具
+type_label_en: Tool
 github: https://github.com/andrelin39/smart-sticky-notes
 ---
 

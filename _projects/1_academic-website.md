@@ -6,7 +6,12 @@ description: 以 Jekyll + al-folio 搭建，支援中英雙語切換，部署於
 description_en: Built with Jekyll + al-folio, with Chinese/English bilingual toggle, deployed on GitHub Pages.
 img: assets/img/projects/academic-website.jpg
 importance: 1
+year: 2026
 category: tools
+status: maintained
+project_type: website
+type_label: 網站建置
+type_label_en: Website
 github: https://github.com/andrelin39/andrelin39.github.io
 ---
 

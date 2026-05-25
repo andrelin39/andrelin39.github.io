@@ -5,7 +5,12 @@ title_en: AI Qualitative Data Analysis
 description: 利用大型語言模型 (LLM) 進行產後護理滿意度問卷的質性資料自動化編碼與分析。
 description_en: Automated coding and analysis of postpartum care satisfaction surveys using Large Language Models (LLMs).
 importance: 1
+year: 2026
 category: research
+status: in_progress
+project_type: research_method
+type_label: 研究方法
+type_label_en: Research Method
 github: https://github.com/andrelin39/postpartum-satisfaction-coding
 ---
 

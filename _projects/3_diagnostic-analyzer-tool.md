@@ -5,7 +5,12 @@ title_en: Medical Data Diagnostic Analyzer
 description: 協助臨床研究者快速診斷數據品質、識別異常值與缺失模式的分析輔助工具。
 description_en: A web-based tool to help clinical researchers quickly diagnose data quality, identify outliers, and examine missing data patterns.
 importance: 3
+year: 2026
 category: tools
+status: completed
+project_type: tool
+type_label: 實用工具
+type_label_en: Tool
 github: https://github.com/andrelin39/diagnostic-analyzer-tool
 ---
 

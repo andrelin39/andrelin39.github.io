@@ -7,7 +7,12 @@ cover_title_en: Medical Big Data Analysis
 description: 結合 AI 工具與醫療大數據，帶領醫療人員從資料到洞見的實戰教學書。
 description_en: A hands-on guide bridging AI tools and healthcare big data, leading medical professionals from raw data to actionable insights.
 importance: 1
+year: 2026
 category: research
+status: in_progress
+project_type: book
+type_label: 書籍撰寫
+type_label_en: Book Writing
 google_drive: https://drive.google.com/drive/folders/16kbCRFd9Knl-8CXTUeYxoQKdgY0b0KN8?usp=drive_link
 ---
 

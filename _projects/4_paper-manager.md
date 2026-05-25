@@ -5,7 +5,12 @@ title_en: "Paper Project Manager"
 description: "協助研究者整理論文專案、追蹤閱讀進度與管理研究工作流程的實用工具"
 description_en: "A practical tool for organizing paper projects, tracking reading progress, and managing research workflows."
 importance: 4
+year: 2026
 category: tools
+status: completed
+project_type: tool
+type_label: 實用工具
+type_label_en: Tool
 github: "https://github.com/andrelin39/paper-manager"
 ---
 
