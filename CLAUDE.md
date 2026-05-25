@@ -69,15 +69,23 @@ featured: false
 
 ```yaml
 ---
-layout: page
+layout: project
 title: 中文標題
 title_en: English Title
+cover_title: 卡片顯示的短標題（選填，省略用 title）
+cover_title_en: Card Short Title (optional)
 description: 中文一行簡述
 description_en: One-line English description
 img: assets/img/projects/filename.png   # 省略則無縮圖
 importance: 1          # 同 category 內排序，數字越小越前
-category: research     # research | teaching | tools
+year: 2026             # 專案年份，用於統計區塊「持續更新」顯示最新年份
+category: research     # research | tools（teaching 專案用獨立頁面）
+status: in_progress    # in_progress | completed | maintained
+project_type: research_method   # 見下方 project_type 表
+type_label: 研究方法           # 卡片上顯示的中文類型小標
+type_label_en: Research Method  # 英文版類型小標
 github: https://github.com/andrelin39/repo   # 選填
+google_drive: https://drive.google.com/...   # 選填，顯示「資料 ↗」按鈕
 ---
 ```
 
@@ -86,8 +94,24 @@ github: https://github.com/andrelin39/repo   # 選填
 | 值 | 顯示（中） | 顯示（英） |
 |----|----------|----------|
 | `research` | 研究專案 | Research Projects |
-| `teaching` | 教學講義 | Teaching Materials |
-| `tools` | 實用工具 | Tools & Scripts |
+| `tools` | 實用工具 | Practical Tools |
+
+**Status 標籤**（卡片右上角 pill）：
+
+| status | 中文顯示 | 英文顯示 | 背景色 | 文字色 |
+|--------|---------|---------|-------|-------|
+| `in_progress` | 進行中 | In Progress | `#FEF3C7` | `#92400E` |
+| `completed` | 已完成 | Completed | `#D1FAE5` | `#065F46` |
+| `maintained` | 持續維護 | Maintained | `#DBEAFE` | `#1E40AF` |
+
+**project_type 分類**（卡片標題下方灰色小標）：
+
+| project_type | type_label（中） | type_label_en（英） | 適用情境 |
+|---|---|---|---|
+| `research_method` | 研究方法 | Research Method | LLM 編碼、統計流程等方法學研究 |
+| `book` | 書籍撰寫 | Book Writing | 書稿、教材撰寫 |
+| `website` | 網站建置 | Website | 個人網站、專案網站 |
+| `tool` | 實用工具 | Tool | 瀏覽器工具、CLI、腳本等 |
 
 **圖片規範**：
 - 路徑：`assets/img/projects/` 下，副檔名 `.png` / `.jpg`
@@ -301,7 +325,18 @@ internal: true
 ## 視覺設計規範
 
 本網站的視覺語言以**學術感、大量留白、無 emoji**為基調。
-新增或修改任何頁面（publications、blog 列表、teaching、talks 等）時，請遵循以下規範。
+新增或修改任何頁面（publications、blog 列表、projects、teaching、talks 等）時，請遵循以下規範。
+
+> **重要：開發新頁面前，務必先參考 `_pages/teaching.md`、`_pages/talks.md`、`_pages/projects.md` 的設計，確保視覺語言一致。**
+
+### 全站一致性規則（不可違反）
+
+1. **類別標題**：一律使用「左側 4px 色條 + 左對齊 + 中英對照」的 banner 樣式，禁止靠右對齊或無色條的設計
+2. **按鈕**：一律使用「淡紫/主題色外框 + 白底 + 主題色文字」樣式；外部連結加 ` ↗` 後綴；禁止黑底白字（logo 感）按鈕
+3. **數據摘要區塊**：所有列表/卡片頁面，頁面標題下方一律加數據摘要（大數字 + 小說明，bordered bottom）
+4. **Section 間距**：`margin-bottom: 5rem`（80px），禁止壓縮
+5. **語言切換**：所有標題、標籤、按鈕文字，一律用 `<span class="lang-zh">` / `<span class="lang-en">` 雙語包裹
+6. **無 emoji**：學術頁面所有位置禁用 emoji，改用文字標籤或 Font Awesome 線性 icon
 
 ### 類別標題（Section Header）
 
@@ -365,14 +400,21 @@ font-family: "Menlo", "Monaco", "Consolas", "Liberation Mono", monospace;
 
 ### 類型標籤（Pill）色碼
 
+**演講類型 pill（talks.md）**：
+
 | 語意 | 背景色 | 文字色 | 適用場景 |
 |------|--------|--------|--------|
-| 主要 / 受邀 | `#EDE9FE` | `#5B21B6` | 專題演講、peer-reviewed |
-| 訓練 / 一般 | `#FFEDD5` | `#C2410C` | 教育訓練、workshop |
-| 次要 / 邀請 | `#DBEAFE` | `#1D4ED8` | 受邀演講、conference |
-| 進行中 | `#D1FAE5` | `#065F46` | active、current |
-| 已結束 | `#F3F4F6` | `#6B7280` | archived |
-| 即將 | `#DBEAFE` | `#1E40AF` | upcoming |
+| 主要 / 受邀 | `#EDE9FE` | `#5B21B6` | 專題演講（invited_talk） |
+| 訓練 / 一般 | `#FFEDD5` | `#C2410C` | 教育訓練（training） |
+| 次要 / 邀請 | `#DBEAFE` | `#1D4ED8` | 受邀演講（invited_speech） |
+
+**專案狀態 pill（projects.md）**：
+
+| status | 背景色 | 文字色 |
+|--------|--------|--------|
+| `in_progress`（進行中） | `#FEF3C7` | `#92400E` |
+| `completed`（已完成） | `#D1FAE5` | `#065F46` |
+| `maintained`（持續維護） | `#DBEAFE` | `#1E40AF` |
 
 ### 按鈕樣式
 
