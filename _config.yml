@@ -8,7 +8,7 @@ middle_name:
 last_name: Lin
 name_zh: 林志豪
 contact_note: >
-  歡迎透過 Email 聯絡，或利用 Google Scholar 查閱我的研究著作。
+  <span class="lang-zh">歡迎來信交流</span><span class="lang-en">Get in touch</span>
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   志豪的異想世界
 footer_text: >

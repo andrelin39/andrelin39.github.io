@@ -65,12 +65,14 @@
 
         abbr {
           display: inline-block;
-          background-color: var(--global-theme-color);
+          background-color: #EDE9FE;
           margin-bottom: 0.5rem;
-          color: var(--global-card-bg-color) !important;
+          color: #6D28D9 !important;
+          border-radius: 4px;
+          font-size: 11px;
 
           a {
-            color: white;
+            color: #6D28D9;
 
             &:hover {
               text-decoration: none;

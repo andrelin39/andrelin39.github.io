@@ -14,6 +14,7 @@
 - **已移除 Decap CMS**（commit: `bec69f5c`）：改為純 Markdown 工作流，直接編輯檔案後 push。
 - **部署方式**：push 到 `main` 分支後，GitHub Actions 自動建置並部署，無需手動操作。
 - **未來日期文章**：`_config.yml` 已設定 `future: true`，允許排程文章公開。
+- **全站啟用 pangu.js 自動處理中英文間距**：已在 `_includes/scripts.liquid` 末尾引入 pangu.js CDN，頁面載入後自動在 CJK 與半形字元間插入空格。
 
 ## 網站七大區塊與對應檔案
 

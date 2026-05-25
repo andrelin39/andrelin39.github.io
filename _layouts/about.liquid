@@ -15,6 +15,12 @@ layout: default
         {{ site.title }}
       {% endif %}
     </h1>
+    {% if site.name_zh %}
+    <p class="name-subtitle">
+      <span class="lang-zh">{{ site.first_name }}{% if site.middle_name %} {{ site.middle_name }}{% endif %} {{ site.last_name }}</span>
+      <span class="lang-en">{{ site.name_zh }}</span>
+    </p>
+    {% endif %}
     <p class="desc">
       <span class="lang-zh">{{ page.subtitle }}</span>
       {% if page.subtitle_en %}<span class="lang-en">{{ page.subtitle_en }}</span>{% endif %}
@@ -49,25 +55,34 @@ layout: default
 
     <!-- Latest posts -->
     {% if page.latest_posts and page.latest_posts.enabled %}
-      <h2>
-        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
-      </h2>
+      <div style="margin-top: 5rem;">
+        <h2 class="about-section-heading">
+          <a href="{{ '/blog/' | relative_url }}" style="color: inherit; text-decoration: none;">
+            <span class="lang-zh">近期文章</span>
+            <span class="lang-en">Latest Posts</span>
+          </a>
+        </h2>
+      </div>
       {% include latest_posts.liquid %}
     {% endif %}
 
     <!-- Selected papers -->
     {% if page.selected_papers %}
-      <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
-      </h2>
+      <div style="margin-top: 5rem;">
+        <h2 class="about-section-heading">
+          <a href="{{ '/publications/' | relative_url }}" style="color: inherit; text-decoration: none;">
+            <span class="lang-zh">精選論文</span>
+            <span class="lang-en">Selected Publications</span>
+          </a>
+        </h2>
+      </div>
       {% include selected_papers.liquid %}
     {% endif %}
 
     <!-- Social -->
     {% if page.social %}
-      <div class="social">
+      <div class="social" style="margin-top: 3.75rem;">
         <div class="contact-icons">{% social_links %}</div>
-
         <div class="contact-note">{{ site.contact_note }}</div>
       </div>
     {% endif %}
