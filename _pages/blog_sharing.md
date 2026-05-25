@@ -5,7 +5,7 @@ title_en: Sharing
 permalink: /sharing/
 description: 值得一讀的論文、工具與資源推薦
 nav: true
-nav_order: 8
+nav_order: 9
 ---
 
 {% assign posts = site.posts | where_exp: "post", "post.categories contains 'sharing'" | sort: "date" | reverse %}

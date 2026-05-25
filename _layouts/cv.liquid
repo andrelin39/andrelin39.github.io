@@ -436,6 +436,27 @@ layout: default
       {% else %}
         <p>No CV data found. Please configure either RenderCV (cv.yml) or JSONResume (resume.json) data.</p>
       {% endif %}
+
+      {% if site.data.talks and site.data.talks.talks.size > 0 %}
+        <a class="anchor" id="invited-talks"></a>
+        <div class="card mt-3 p-3">
+          <h3 class="card-title font-weight-medium">
+            <span class="lang-zh">演講記錄</span>
+            <span class="lang-en">Invited Talks</span>
+          </h3>
+          {% assign cv_talks = site.data.talks.talks | sort: "date" | reverse %}
+          <ul class="card-text font-weight-light list-group list-group-flush" style="padding-left:0;">
+            {% for talk in cv_talks %}
+              {% assign tm = talk.date | date: "%m" | plus: 0 %}
+              {% assign td = talk.date | date: "%d" | plus: 0 %}
+              <li class="list-group-item px-0" style="font-size:0.85rem; line-height:1.65;">
+                <span class="lang-zh">林志豪（{{ talk.date | date: "%Y" }} 年 {{ tm }} 月 {{ td }} 日）。〈{{ talk.title }}〉。{% if talk.type == "invited_talk" %}專題演講{% elsif talk.type == "training" %}教育訓練{% elsif talk.type == "invited_speech" %}受邀演講{% else %}{{ talk.type }}{% endif %}，{{ talk.organization }}，{{ talk.location }}。</span>
+                <span class="lang-en">Lin, C.-H. ({{ talk.date | date: "%Y" }}, {{ talk.date | date: "%B" }} {{ td }}). {{ talk.title_en }}. [{% if talk.type == "invited_talk" %}Invited Talk{% elsif talk.type == "training" %}Training Session{% elsif talk.type == "invited_speech" %}Invited Speech{% else %}{{ talk.type }}{% endif %}], {{ talk.organization_en }}, {{ talk.location_en }}.</span>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endif %}
     </div>
   </article>
 </div>

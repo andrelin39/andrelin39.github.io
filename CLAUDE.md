@@ -15,7 +15,7 @@
 - **部署方式**：push 到 `main` 分支後，GitHub Actions 自動建置並部署，無需手動操作。
 - **未來日期文章**：`_config.yml` 已設定 `future: true`，允許排程文章公開。
 
-## 網站六大區塊與對應檔案
+## 網站七大區塊與對應檔案
 
 | 區塊 | 設定頁面 | 內容來源 |
 |------|----------|----------|
@@ -23,8 +23,9 @@
 | Blog（含三個子分類） | `_pages/blog.md`、`_pages/blog_notes.md`、`_pages/blog_sharing.md`、`_pages/blog_thoughts.md` | `_posts/YYYY-MM-DD-*.md` |
 | Publications（論文） | `_pages/publications.md` | `_bibliography/papers.bib` |
 | Projects（專案） | `_pages/projects.md` | `_projects/*.md`（category ≠ teaching） |
-| 教學講義 | `_pages/teaching.md` | `_projects/*.md`（category: teaching） |
-| CV | `_pages/cv.md` | `_data/cv.yml` |
+| 教學講義 | `_pages/teaching.md` | `_data/courses.yml` |
+| **演講邀約** | **`_pages/talks.md`** | **`_data/talks.yml`** |
+| CV | `_pages/cv.md` | `_data/cv.yml`（演講記錄自動從 `_data/talks.yml` 讀取） |
 
 Blog 文章依 `categories` 欄位路由到不同子頁：
 - `categories: notes` → 學習筆記（/notes/）
@@ -222,3 +223,192 @@ git push origin main
 ### 學生資料
 
 一律放 `99_學生資料/` 子目錄，**絕對不公開、不對外連結**。
+
+## 演講資料管理規範
+
+### 新增演講
+
+只需在 `_data/talks.yml` 的 `talks:` 陣列新增一筆，格式如下：
+
+```yaml
+- id: YYYY-MM-講題slug
+  date: YYYY-MM-DD
+  title: 中文講題
+  title_en: English Title
+  type: invited_talk     # invited_talk | training | invited_speech
+  organization: 機構中文名
+  organization_en: Organization English Name
+  location: 縣市（例：彰化縣彰化市）
+  location_en: City, County (e.g., Changhua City, Changhua County)
+  category: ai_applications   # 見類別歸屬規則
+  slides_folder: "TBD_YYYY-MM-slug"  # Google Drive 資料夾連結；填 TBD_xxx 時顯示「整理中」
+  slides:       # 單份講綱 PDF 連結（留空不顯示）
+  photo:        # 活動照片連結（留空不顯示）
+  video:        # 影片連結（留空不顯示）
+  news:         # 新聞報導連結（留空不顯示）
+  event_page:   # 活動頁面連結（留空不顯示）
+  abstract:     # 一兩句講題簡述（選填）
+  internal: true   # 如為內部資料，加此行；省略則不加
+```
+
+新增後，以下三處**自動更新**，無需手動改：
+- `/talks/` 頁面統計數字（場次、年數、單位、縣市）
+- `/talks/` 分類列表
+- `/cv/` 演講記錄（APA 格式引用）
+
+### Google Drive 演講資料管理
+
+- **根目錄**：Google Drive → `教學資料 / 演講資料 /`
+- **每場演講一個資料夾**，命名格式：`YYYY-MM_講題簡稱_地點`
+  - 例：`2025-08_數位轉型AI分析_彰化CCH`
+- 資料夾內放：投影片（PDF/PPTX）、講綱、範例檔案等
+- 所有演講都是**開放式內容，可公開分享**（不含敏感個資）
+- 取得「知道連結的人均可檢視」共用連結後，在 `talks.yml` 中：
+  - 把 `slides_folder: "TBD_xxx"` 替換成正式 Google Drive URL
+  - 網站會自動從「整理中」變成可點擊的「演講資料 ↗」按鈕
+
+### 講綱 PDF 命名與存放
+
+- 本地 PDF：放 `assets/pdf/talks/`，命名格式 `YYYY-MM_講題簡稱.pdf`
+- 建議優先用 Google Drive 資料夾連結（`slides_folder`），不逐份上傳到 repo
+
+### 類別歸屬規則
+
+| 類別 id | 適用情境 |
+|---------|--------|
+| `ai_applications` | AI 工具教學、辦公自動化、資料分析應用 |
+| `research` | 護理研究、學術方法、文獻管理（JCR 等） |
+| `ai_ethics` | AI 倫理、法律與 AI、跨領域議題 |
+
+若不屬於現有類別，在 `_data/talks.yml` 的 `categories:` 新增一個項目，指定新的 `id`、`name`、`name_en`、`order`。
+
+### 演講類型說明
+
+| type | 中文顯示 | 顏色標籤 |
+|------|--------|--------|
+| `invited_talk` | 專題演講 | 淺紫 |
+| `training` | 教育訓練 | 淺橘 |
+| `invited_speech` | 受邀演講 | 淺藍 |
+
+### 內部資料處理
+
+對於不宜公開講綱的演講（如院內訓練），在 `talks.yml` 加：
+```yaml
+internal: true
+```
+該場次仍顯示在列表，但不顯示任何連結，改顯示「內部資料」字樣。
+
+## 視覺設計規範
+
+本網站的視覺語言以**學術感、大量留白、無 emoji**為基調。
+新增或修改任何頁面（publications、blog 列表、teaching、talks 等）時，請遵循以下規範。
+
+### 類別標題（Section Header）
+
+```css
+/* 左側色條 + 縮排 */
+border-left: 4px solid var(--global-theme-color, #526EB4);
+padding-left: 16px;
+
+/* 中文主標題 */
+font-size: 2rem;        /* 32px，可至 2.25rem */
+font-weight: 700;
+color: #111827;
+letter-spacing: -0.02em;
+line-height: 1.15;
+
+/* 英文副標（緊接主標題下方） */
+font-size: 0.875rem;    /* 14px */
+color: #9CA3AF;
+font-weight: 400;
+```
+
+實作範例（HTML 結構）：
+```html
+<div class="section-banner">           <!-- 包住色條 + 文字 -->
+  <h3 class="section-title">
+    <span class="lang-zh">中文類別名稱</span>
+    <span class="lang-en">English Category Name</span>
+  </h3>
+  <span class="section-sub">
+    <span class="lang-zh">English Category Name</span>   <!-- ZH 模式顯示英文副標 -->
+    <span class="lang-en">中文類別名稱</span>            <!-- EN 模式顯示中文副標 -->
+  </span>
+</div>
+<hr style="border-top: 1px solid #E5E7EB; margin: 1.25rem 0 0 0;">
+```
+
+### 內容條目排版
+
+| 元素 | 字級 | 字重 | 顏色 |
+|------|------|------|------|
+| 條目標題（講題、論文標題） | 18px（`1.125rem`） | 600 | `#1F2937` |
+| 機構 / 期刊名稱 | 13px（`0.8125rem`） | 400 | `#9CA3AF` |
+| 地點 / 日期等次要資訊 | 13px（`0.8125rem`） | 400 | `#9CA3AF` |
+| 類型標籤（pill） | 11px（`0.6875rem`） | 500 | 依類型色碼 |
+| 日期（等寬字體） | 12.8px（`0.8rem`） | 400 | `#6B7280` |
+
+日期使用等寬字體以對齊：
+```css
+font-family: "Menlo", "Monaco", "Consolas", "Liberation Mono", monospace;
+```
+
+### 間距規範
+
+| 位置 | 值 |
+|------|----|
+| Section 與 Section 之間 | `5rem`（80px） |
+| 類別標題到第一筆內容 | `2rem`（32px） |
+| 條目內部上下 padding | `1.25rem 0` |
+| 條目分隔線顏色 | `#E5E7EB`（最後一筆不加線） |
+| 統計區塊底部 border | `1px solid #E5E7EB` |
+
+### 類型標籤（Pill）色碼
+
+| 語意 | 背景色 | 文字色 | 適用場景 |
+|------|--------|--------|--------|
+| 主要 / 受邀 | `#EDE9FE` | `#5B21B6` | 專題演講、peer-reviewed |
+| 訓練 / 一般 | `#FFEDD5` | `#C2410C` | 教育訓練、workshop |
+| 次要 / 邀請 | `#DBEAFE` | `#1D4ED8` | 受邀演講、conference |
+| 進行中 | `#D1FAE5` | `#065F46` | active、current |
+| 已結束 | `#F3F4F6` | `#6B7280` | archived |
+| 即將 | `#DBEAFE` | `#1E40AF` | upcoming |
+
+### 按鈕樣式
+
+**主要行動按鈕**（演講資料、課程資料夾）：
+```css
+border: 1px solid var(--global-theme-color, #526EB4);
+color: var(--global-theme-color, #526EB4);
+/* hover */
+background: var(--global-theme-color);
+color: #fff;
+```
+
+**次要按鈕**（講綱、照片等附件）：
+```css
+border: 1px solid #D1D5DB;
+color: #6B7280;
+/* hover */
+border-color: #9CA3AF;
+color: #374151;
+```
+
+**停用按鈕**（整理中、Coming soon）：
+```css
+border: 1px solid #E5E7EB;
+color: #D1D5DB;
+cursor: default;
+pointer-events: none;
+```
+
+按鈕通用屬性：`font-size: 0.75rem`、`padding: 0.2rem 0.65rem`、`border-radius: 4px`。
+外部連結一律加 `target="_blank" rel="noopener noreferrer"`，文字後綴 ` ↗`。
+
+### 整體基調
+
+- **留白優先**：寧可多留空間，不要塞滿資訊
+- **無 emoji**：學術頁面一律不使用 emoji，改用線性圖示（Font Awesome）或文字標籤
+- **雙語並陳**：所有標題、標籤、按鈕都用 `<span class="lang-zh">` / `<span class="lang-en">` 包裹
+- **顏色節制**：主色只用 `var(--global-theme-color)`，其餘用灰階；強調色限用在 pill 標籤
+- **分隔線**：用 `#E5E7EB`（淡灰），不用粗線或顏色線

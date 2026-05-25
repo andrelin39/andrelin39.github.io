@@ -1,0 +1,140 @@
+categories:
+  - id: ai_ethics
+    name: AI 趨勢與發展
+    name_en: AI Trends & Development
+    order: 1
+  - id: ai_applications
+    name: AI 工具與應用
+    name_en: AI Tools & Applications
+    order: 2
+  - id: research
+    name: 學術研究相關
+    name_en: Academic Research
+    order: 3
+
+talks:
+  - id: 2024-08-chatgpt4o-nursing
+    date: 2024-08-23
+    title: ChatGPT 4o 功能簡介與資料分析的應用
+    title_en: Introduction to ChatGPT 4o Features and Applications in Data Analysis
+    type: invited_talk
+    organization: 彰化基督教醫院護理部
+    organization_en: Changhua Christian Hospital, Department of Nursing
+    location: 彰化縣彰化市
+    location_en: Changhua City, Changhua County
+    category: ai_applications
+    slides_folder: "https://drive.google.com/drive/folders/1IW5wZrCBhuRUnHUVcM9iHuiVShZdrZAw?usp=drive_link"
+    slides:
+    photo:
+    video:
+    news:
+    event_page:
+    abstract:
+
+  - id: 2024-12-chatgpt-automation-yunlin
+    date: 2024-12-06
+    title: "善用 ChatGPT 打造辦公室自動化流程：GPT 與 API"
+    title_en: "Leveraging ChatGPT for Office Automation: GPTs and API"
+    type: invited_talk
+    organization: 雲林基督教醫院
+    organization_en: Yunlin Christian Hospital
+    location: 雲林斗六市
+    location_en: Douliu City, Yunlin County
+    category: ai_applications
+    slides_folder: "https://drive.google.com/drive/folders/1Z9CUdr1c-0X4p1flSpYefsDeWSlrexz4?usp=drive_link"
+    slides:
+    photo:
+    video:
+    news:
+    event_page:
+    abstract:
+
+  - id: 2025-02-chatgpt-automation-yuanlin
+    date: 2025-02-21
+    title: "善用 ChatGPT 打造辦公室自動化流程：GPTs 與 API"
+    title_en: "Leveraging ChatGPT for Office Automation: GPTs and API"
+    type: invited_talk
+    organization: 員林基督教醫院
+    organization_en: Yuanlin Christian Hospital
+    location: 彰化員林鎮
+    location_en: Yuanlin, Changhua County
+    category: ai_applications
+    slides_folder: "https://drive.google.com/drive/folders/1lZV6ZnDYqDlxTNH6UfRamQPQuVEC-fsz?usp=drive_link"
+    slides:
+    photo:
+    video:
+    news:
+    event_page:
+    abstract:
+
+  - id: 2025-03-nursing-research-jcr
+    date: 2025-03-27
+    title: 護理研究常見問題及 JCR 介紹
+    title_en: Common Issues in Nursing Research and Introduction to JCR
+    type: invited_talk
+    organization: 彰化基督教醫院護理部
+    organization_en: Changhua Christian Hospital, Department of Nursing
+    location: 彰化縣彰化市
+    location_en: Changhua City, Changhua County
+    category: research
+    slides_folder: "https://drive.google.com/drive/folders/1NhWsOkKLFw7q4EkfcgnoSmV2k7dKD5Mn?usp=drive_link"
+    slides:
+    photo:
+    video:
+    news:
+    event_page:
+    abstract:
+
+  - id: 2025-04-ai-workflow-cch
+    date: 2025-04-16
+    title: 善用 AI 工具提升工作流程效率
+    title_en: Leveraging AI Tools to Improve Workflow Efficiency
+    type: training
+    organization: 彰化基督教醫院體系發展中心
+    organization_en: Changhua Christian Hospital, System Development Center
+    location: 彰化縣彰化市
+    location_en: Changhua City, Changhua County
+    category: ai_applications
+    slides_folder: "https://drive.google.com/drive/folders/1PjegLVJLrK8qrvPG3wQ_JO8WF5UVvsaU?usp=drive_link"
+    slides:
+    photo:
+    video:
+    news:
+    event_page:
+    abstract:
+
+  - id: 2025-06-ai-law-yilan
+    date: 2025-06-20
+    title: "當法律遇上 AI：淺談現況與未來"
+    title_en: "When Law Meets AI: A Brief Overview of Current Status and Future Prospects"
+    type: invited_speech
+    organization: 宜蘭行政執行署
+    organization_en: Yilan Administrative Enforcement Agency
+    location: 宜蘭宜蘭市
+    location_en: Yilan City, Yilan County
+    category: ai_ethics
+    slides_folder: "https://drive.google.com/drive/folders/1CNWetihCY8GSyFIGKafCYQ4UHk85E920?usp=drive_link"
+    slides:
+    photo:
+    video:
+    news:
+    event_page:
+    abstract:
+
+  - id: 2025-08-digital-transformation-cch
+    date: 2025-08-20
+    title: 數位轉型 — 運用 AI 分析數據資料及撰寫分析報告
+    title_en: Digital Transformation — Using AI for Data Analysis and Reporting
+    type: training
+    organization: 彰化基督教醫院體系發展中心
+    organization_en: Changhua Christian Hospital, System Development Center
+    location: 彰化縣彰化市
+    location_en: Changhua City, Changhua County
+    category: ai_applications
+    slides_folder: "https://drive.google.com/drive/folders/1SSwXGxLfYV6SBEbDCF_P0ih5FazdAZSB?usp=drive_link"
+    slides:
+    photo:
+    video:
+    news:
+    event_page:
+    abstract:

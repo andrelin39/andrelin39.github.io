@@ -48,7 +48,9 @@
               {% if p.dropdown %}
                 {% assign has_active_child = false %}
                 {% for child in p.children %}
-                  {% if page.title == child.title %}
+                  {% if child.permalink and page.url == child.permalink %}
+                    {% assign has_active_child = true %}
+                  {% elsif page.title == child.title %}
                     {% assign has_active_child = true %}
                   {% endif %}
                 {% endfor %}
@@ -62,7 +64,15 @@
                     aria-haspopup="true"
                     aria-expanded="false"
                   >
-                    {{- p.title }}
+                    {% if p.title_zh %}
+                      <span class="lang-zh">{{ p.title_zh }}</span>
+                      <span class="lang-en">{{ p.title }}</span>
+                    {% elsif p.title_en %}
+                      <span class="lang-zh">{{ p.title }}</span>
+                      <span class="lang-en">{{ p.title_en }}</span>
+                    {% else %}
+                      {{- p.title }}
+                    {% endif %}
                     {% if page.title == p.title or has_active_child %}
                       <span class="sr-only">(current)</span>
                     {% endif %}
@@ -72,11 +82,22 @@
                       {% if child.title == 'divider' %}
                         <div class="dropdown-divider"></div>
                       {% else %}
+                        {% assign child_active = false %}
+                        {% if child.permalink and page.url == child.permalink %}
+                          {% assign child_active = true %}
+                        {% elsif page.title == child.title %}
+                          {% assign child_active = true %}
+                        {% endif %}
                         <a
-                          class="dropdown-item {% if page.title == child.title %}active{% endif %}"
+                          class="dropdown-item {% if child_active %}active{% endif %}"
                           href="{% if child.permalink contains '://' %}{{ child.permalink }}{% else %}{{ child.permalink | relative_url }}{% endif %}"
                         >
-                          {{- child.title -}}
+                          {% if child.title_en %}
+                            <span class="lang-zh">{{ child.title }}</span>
+                            <span class="lang-en">{{ child.title_en }}</span>
+                          {% else %}
+                            {{- child.title -}}
+                          {% endif %}
                         </a>
                       {% endif %}
                     {% endfor %}

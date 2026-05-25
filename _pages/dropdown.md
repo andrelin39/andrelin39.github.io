@@ -1,13 +1,16 @@
 ---
 layout: page
-title: submenus
-nav: false
-nav_order: 8
+title: 教學演講
+title_en: Teaching
+permalink: /teaching-nav/
+nav: true
+nav_order: 4
 dropdown: true
 children:
-  - title: bookshelf
-    permalink: /books/
-  - title: divider
-  - title: blog
-    permalink: /blog/
+  - title: 課程
+    title_en: Courses
+    permalink: /teaching/
+  - title: 演講
+    title_en: Talks
+    permalink: /talks/
 ---

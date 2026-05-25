@@ -1,11 +1,10 @@
 ---
 layout: page
-title: 教學演講
-title_en: Teaching
+title: 課程資料
+title_en: Courses
 permalink: /teaching/
 description: ""
-nav: true
-nav_order: 4
+nav: false
 ---
 
 <style>

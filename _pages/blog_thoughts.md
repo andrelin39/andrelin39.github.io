@@ -5,7 +5,7 @@ title_en: Thoughts
 permalink: /thoughts/
 description: 研究生涯、醫療現場與日常生活的觀察與感悟
 nav: true
-nav_order: 7
+nav_order: 8
 ---
 
 {% assign posts = site.posts | where_exp: "post", "post.categories contains 'thoughts'" | sort: "date" | reverse %}
