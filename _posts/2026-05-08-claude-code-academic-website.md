@@ -4,7 +4,7 @@ title: 用 Claude Code 建立個人學術網站:從挫折到成就感的 AI Agen
 date: 2026-05-08
 description: 紀錄一段以 Claude Code 為協作者、從零搭建學術個人網站的歷程,反思 AI Agent 與傳統對話式 AI 在執行層面的本質差異。
 tags: AI工具 ClaudeCode Jekyll 網站建置
-categories: sharing
+categories: notes
 ---
 
 老實說,這個網站我「建」過好幾次。
