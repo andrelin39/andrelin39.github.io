@@ -72,7 +72,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/sharing/";
           },
-        },{id: "post-三班護病比入法了-但這三件事你該知道",
+        },{id: "post-當-ai-開始替你完成研究-執行者到架構者",
+        
+          title: "當 AI 開始替你完成研究：執行者到架構者",
+        
+        description: "讓 Codex 跑完整份分析後，我感到的不是驚艷，而是一種難以形容的空洞感。那讓我開始重新思考：研究者的價值，究竟在哪裡？",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/ai-researcher-identity-shift/";
+          
+        },
+      },{id: "post-三班護病比入法了-但這三件事你該知道",
         
           title: "三班護病比入法了，但這三件事你該知道",
         
