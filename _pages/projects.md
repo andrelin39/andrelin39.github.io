@@ -19,30 +19,6 @@ nav_order: 3
   margin-bottom: 2.5rem;
 }
 
-/* ── Stats ─── */
-.pj-stats {
-  display: flex;
-  gap: 2.5rem;
-  margin-bottom: 3.5rem;
-  flex-wrap: wrap;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid #E5E7EB;
-}
-
-.pj-stat-number {
-  font-size: 2.25rem;
-  font-weight: 700;
-  color: #111827;
-  line-height: 1;
-  letter-spacing: -0.02em;
-}
-
-.pj-stat-label {
-  font-size: 0.78rem;
-  color: #9CA3AF;
-  margin-top: 0.3rem;
-}
-
 /* ── Category sections ─── */
 .pj-section { margin-bottom: 5rem; }
 
@@ -206,40 +182,6 @@ nav_order: 3
 {% assign tools_projects    = site.projects | where: "category", "tools"    | sort: "importance" %}
 {% assign research_count = research_projects | size %}
 {% assign tools_count    = tools_projects    | size %}
-{% assign total_count    = research_count | plus: tools_count %}
-{% assign all_pj         = research_projects | concat: tools_projects %}
-{% assign latest_year    = all_pj | map: "year" | compact | sort | last %}
-
-<div class="pj-stats">
-  <div>
-    <div class="pj-stat-number">{{ total_count }}</div>
-    <div class="pj-stat-label">
-      <span class="lang-zh">專案總數</span>
-      <span class="lang-en">Projects</span>
-    </div>
-  </div>
-  <div>
-    <div class="pj-stat-number">{{ research_count }}</div>
-    <div class="pj-stat-label">
-      <span class="lang-zh">研究專案</span>
-      <span class="lang-en">Research</span>
-    </div>
-  </div>
-  <div>
-    <div class="pj-stat-number">{{ tools_count }}</div>
-    <div class="pj-stat-label">
-      <span class="lang-zh">實用工具</span>
-      <span class="lang-en">Tools</span>
-    </div>
-  </div>
-  <div>
-    <div class="pj-stat-number">{{ latest_year }}</div>
-    <div class="pj-stat-label">
-      <span class="lang-zh">持續更新</span>
-      <span class="lang-en">Active</span>
-    </div>
-  </div>
-</div>
 
 {% if research_count > 0 %}
 <section class="pj-section" id="research">

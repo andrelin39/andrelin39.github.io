@@ -17,30 +17,6 @@ nav: false
   margin-bottom: 2.5rem;
 }
 
-/* ── Stats row ─── */
-.tk-stats {
-  display: flex;
-  gap: 2.5rem;
-  margin-bottom: 3.5rem;
-  flex-wrap: wrap;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid #E5E7EB;
-}
-
-.tk-stat-number {
-  font-size: 2.25rem;
-  font-weight: 700;
-  color: #111827;
-  line-height: 1;
-  letter-spacing: -0.02em;
-}
-
-.tk-stat-label {
-  font-size: 0.78rem;
-  color: #9CA3AF;
-  margin-top: 0.3rem;
-}
-
 /* ── Category sections ─── */
 .tk-section {
   margin-bottom: 5rem;
@@ -193,52 +169,6 @@ nav: false
 </p>
 
 {% assign all_talks = site.data.talks.talks %}
-
-{% comment %} Stats calculation {% endcomment %}
-{% assign total_count = all_talks | size %}
-
-{% assign year_list = "" | split: "|" %}
-{% for talk in all_talks %}
-  {% assign y = talk.date | date: "%Y" %}
-  {% unless year_list contains y %}
-    {% assign year_list = year_list | push: y %}
-  {% endunless %}
-{% endfor %}
-{% assign year_count = year_list | size %}
-
-{% assign org_count = all_talks | map: "organization" | uniq | size %}
-{% assign loc_count = all_talks | map: "location" | uniq | size %}
-
-<div class="tk-stats">
-  <div>
-    <div class="tk-stat-number">{{ total_count }}</div>
-    <div class="tk-stat-label">
-      <span class="lang-zh">總場次</span>
-      <span class="lang-en">Total Talks</span>
-    </div>
-  </div>
-  <div>
-    <div class="tk-stat-number">{{ year_count }}</div>
-    <div class="tk-stat-label">
-      <span class="lang-zh">累積年數</span>
-      <span class="lang-en">Years Active</span>
-    </div>
-  </div>
-  <div>
-    <div class="tk-stat-number">{{ org_count }}</div>
-    <div class="tk-stat-label">
-      <span class="lang-zh">邀請單位</span>
-      <span class="lang-en">Organizations</span>
-    </div>
-  </div>
-  <div>
-    <div class="tk-stat-number">{{ loc_count }}</div>
-    <div class="tk-stat-label">
-      <span class="lang-zh">涵蓋縣市</span>
-      <span class="lang-en">Locations</span>
-    </div>
-  </div>
-</div>
 
 {% assign sorted_cats = site.data.talks.categories | sort: "order" %}
 
