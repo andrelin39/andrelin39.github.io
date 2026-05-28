@@ -56,9 +56,53 @@ featured: false
 
 ### 新增論文
 
+論文發表頁（`/publications/`）分為兩個分區，用 BibTeX 類型自動路由：
+- **期刊論文**用 `@article`，放 `_bibliography/papers.bib` 上半部
+- **研討會論文**用 `@inproceedings`，放 `_bibliography/papers.bib` 下半部（`%% ---- Conference Papers ----` 區塊）
+
+#### 新增期刊論文
+
 1. 開啟 `_bibliography/papers.bib`
-2. 新增 BibTeX 條目；若要在首頁顯示，加上 `selected={true}`
+2. 在對應年份區塊新增 `@article` 條目；若要在首頁顯示，加上 `selected={true}`
 3. `git add _bibliography/papers.bib`、`commit`、`push`
+
+#### 新增研討會論文
+
+研討會論文必填欄位：
+
+| 欄位 | 說明 | 範例 |
+|------|------|------|
+| `booktitle` | 研討會全名 | `台灣護理學會年度學術研討會` |
+| `address` | 舉辦地點 | `台北，台灣` |
+| `year` | 年份 | `2025` |
+| `month` | 月份 | `Oct` |
+| `abbr` | 發表類型（決定左側徽章顏色） | `Oral` / `Poster` / `Keynote` / `Invited` |
+| `note` | 完整類型說明（顯示在卡片） | `Oral Presentation` |
+
+`abbr` 欄位可選值與對應徽章顏色：
+- `Oral` → 淺橘底 `#FED7AA` + 深橘字 `#9A3412`
+- `Poster` → 淺青底 `#A7F3D0` + 深青字 `#065F46`
+- `Keynote` → 淺紫底 `#DDD6FE` + 深紫字 `#5B21B6`
+- `Invited` → 淺粉底 `#FBCFE8` + 深粉字 `#9D174D`
+
+新增研討會論文 SOP：
+1. 從研討會官網取得正式名稱（`booktitle`）
+2. 確認發表類型（Oral / Poster / Keynote / Invited）
+3. 整理 BibTeX，參考 `papers.bib` 中的 `lin2025example` 範例格式
+4. 把範例條目替換掉（或在其下方新增真實條目，刪除範例）
+5. `git add _bibliography/papers.bib`、`commit`、`push`
+
+### 論文頁面進階功能（已啟用）
+
+- **右側年份目錄**（桌面版 >1024px）：Jekyll 渲染後由 JS 從 DOM 動態建構，包含年份與論文數量；新增論文時目錄**自動更新**，無需手動維護
+- **滾動自動高亮**：捲動到某年份時，TOC 對應年份自動標紫色
+- **回到頂部按鈕**：捲動超過 500px 後浮現於右下角
+- **搜尋框增強**：`bibsearch.js` 支援標題、作者、期刊、年份即時過濾；搜尋時顯示「找到 X 筆結果」
+
+未來論文超過 50 篇時，可考慮新增：
+- 「最近 5 年」/ 「全部」切換按鈕
+- 期刊影響因子標籤（手動維護 `_data/venues.yml`）
+- 引用次數排序（需要 Google Scholar API 或手動更新 `_data/citations.yml`）
 
 ### 新增專案（research / tools）
 
@@ -455,3 +499,11 @@ pointer-events: none;
 - **雙語並陳**：所有標題、標籤、按鈕都用 `<span class="lang-zh">` / `<span class="lang-en">` 包裹
 - **顏色節制**：主色只用 `var(--global-theme-color)`，其餘用灰階；強調色限用在 pill 標籤
 - **分隔線**：用 `#E5E7EB`（淡灰），不用粗線或顏色線
+
+### 數據摘要區塊的適用原則
+
+「大數字 + 小標籤」統計區塊（如演講頁的總場次、年數）適用情境：
+- **適合**：教學頁、演講頁、專案頁——內容散落、讀者需要俯瞰全貌才能掌握規模
+- **不適合**：論文頁——列表本身已是最直接的呈現，每篇有引用數；加摘要反而多餘
+- **不適合**：Blog 列表頁——同理，篇數一眼可見，無需額外統計
+- **判斷原則**：如果讀者捲一下就能掌握數量和分布，就不需要摘要區塊
