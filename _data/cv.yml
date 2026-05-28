@@ -107,13 +107,27 @@ cv:
         end_date: 2010
 
     Research Grants:
-      # 尚無計畫——核准後依此格式新增，取消 # 即可啟用。區塊在有資料前不顯示。
-      #
-      # - title: 運用 AI 於產後護理品質提升之研究
-      #   title_en: AI-Assisted Quality Improvement in Postpartum Care
-      #   funder: 國家科學及技術委員會
-      #   funder_en: National Science and Technology Council (NSTC)
-      #   grant_number: NSTC 113-2410-H-XXX-XXX
+      - title: 以大語言模型開發並驗證護理研究 EQUATOR 指引遵循度之自動化評估工具
+        title_en: Development and Validation of an LLM-based Automated Tool for Assessing EQUATOR Guideline Adherence in Nursing Research
+        funder: 彰化基督教醫院
+        funder_en: Changhua Christian Hospital
+        grant_number: "CCH IRB No. 251251"
+        role: 主持人
+        role_en: Principal Investigator (PI)
+        start_date: 2025-12
+        end_date: 2026-12
+        type: 院內 IRB 研究計畫
+        type_en: Institutional IRB Research Protocol
+        status: ongoing
+        description: 開發以大型語言模型為核心的自動化工具，用於評估護理研究論文對 EQUATOR 報告指引的遵循程度。
+        description_en: Developing an LLM-based automated tool to assess EQUATOR guideline adherence in nursing research publications.
+
+      # 未來計畫範例格式（取消 # 即可啟用）：
+      # - title: 計畫中文名稱
+      #   title_en: Project English Title
+      #   funder: 補助單位（如：國家科學及技術委員會）
+      #   funder_en: Funding Agency (e.g., NSTC)
+      #   grant_number: "NSTC 113-2410-H-XXX-XXX"
       #   role: 主持人
       #   role_en: Principal Investigator (PI)
       #   start_date: 2025-08
@@ -122,8 +136,8 @@ cv:
       #   type_en: Research Project Grant
       #   status: ongoing          # ongoing | completed
       #   amount:                  # 金額保留但不顯示於頁面
-      #   description: 探討 AI 工具於產後護理品質評估與改善的應用潛力。
-      #   description_en: Exploring AI applications for quality assessment and improvement in postpartum care.
+      #   description: 一句話簡述。
+      #   description_en: One-sentence description.
 
     Skills:
       - name: 統計分析
