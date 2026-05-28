@@ -1,7 +1,7 @@
 cv:
   name: Chih-Hao Lin（林志豪）
   label: Researcher · Biostatistics · AI Applications
-  label_zh: 研究員 · 生物統計 · AI 應用
+  label_zh: 研究員 · 彰化基督教醫院大數據暨數位 AI 應用中心
   email: andrelin39@gmail.com
   location: Changhua, Taiwan
   image: ""
@@ -32,6 +32,7 @@ cv:
         company_en: Changhua Christian Hospital, Big Data & Digital AI Application Center
         position: 研究員（護理部）
         position_en: Researcher (Nursing Division)
+        tag: 學術
         location: 彰化市, 台灣
         start_date: 2024-05
         end_date: present
@@ -50,6 +51,7 @@ cv:
         company_en: Kangjun Medical Technology Co., Ltd.
         position: 行政副理
         position_en: Administrative Deputy Manager
+        tag: 業界
         location: 台南市, 台灣
         start_date: 2021-06
         end_date: 2023-12
@@ -58,6 +60,7 @@ cv:
         company_en: National Yang Ming Chiao Tung University, Industry-Academia Operations Center
         position: 產學博士後（科技部產業高階人才培訓計畫）
         position_en: Industry-Academia Postdoctoral Researcher (NSTC Advanced Talent Program)
+        tag: 產學
         location: 台灣
         start_date: 2021-06
         end_date: 2022-05
@@ -66,6 +69,7 @@ cv:
         company_en: Hengyuan Green Energy Technology Co., Ltd.
         position: 財務營運經理
         position_en: Financial Operations Manager
+        tag: 業界
         location: 台灣
         start_date: 2018-06
         end_date: 2021-05
@@ -74,6 +78,7 @@ cv:
         company_en: Hocin Precision Machinery Co., Ltd.
         position: 成本數據中心 經理
         position_en: Manager, Cost Data Center
+        tag: 業界
         location: 台灣
         start_date: 2013-02
         end_date: 2018-05
@@ -82,6 +87,7 @@ cv:
         company_en: Providence University, Dept. of Statistics and Information Science
         position: 兼任助理教授
         position_en: Adjunct Assistant Professor
+        tag: 學術
         location: 台中市, 台灣
         start_date: 2012-09
         end_date: 2013-01
@@ -90,6 +96,7 @@ cv:
         company_en: Ling Tung University, Dept. of Applied Foreign Languages
         position: 兼任講師
         position_en: Adjunct Lecturer
+        tag: 學術
         location: 台中市, 台灣
         start_date: 2012-09
         end_date: 2013-01

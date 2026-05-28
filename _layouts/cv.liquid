@@ -13,6 +13,51 @@ layout: default
   Both formats use the same unified rendering includes for consistent output
 {% endcomment %}
 
+<style>
+.cv-layout {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+.cv-sidebar {
+  width: 140px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 5rem;
+}
+.cv-sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.cv-sidebar nav ul li {
+  margin-bottom: 0.3rem;
+}
+.cv-sidebar nav ul li a {
+  display: block;
+  font-size: 0.78rem;
+  color: #9CA3AF;
+  text-decoration: none;
+  padding: 3px 0 3px 10px;
+  border-left: 2px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+  line-height: 1.4;
+}
+.cv-sidebar nav ul li a:hover,
+.cv-sidebar nav ul li a.cv-toc-active {
+  color: var(--global-theme-color, #526EB4);
+  border-left-color: var(--global-theme-color, #526EB4);
+}
+.cv-main {
+  flex: 1;
+  min-width: 0;
+}
+@media (max-width: 767px) {
+  .cv-layout { flex-direction: column; }
+  .cv-sidebar { display: none; }
+}
+</style>
+
 <div class="post">
   <header class="post-header">
     <h1 class="post-title">
@@ -32,12 +77,34 @@ layout: default
         </a>
       {% endif %}
     </h1>
-    {% if page.description %}
+    {% if page.description_zh or page.description_en %}
+      <p class="post-description">
+        <span class="lang-zh">{{ page.description_zh }}</span>
+        <span class="lang-en">{{ page.description_en }}</span>
+      </p>
+    {% elsif page.description %}
       <p class="post-description">{{ page.description }}</p>
     {% endif %}
   </header>
 
   <article>
+    <div class="cv-layout">
+
+      <!-- Sidebar TOC -->
+      <aside class="cv-sidebar">
+        <nav>
+          <ul id="cv-toc-list">
+            <li><a href="#experience" class="lang-zh">工作經歷</a><a href="#experience" class="lang-en">Experience</a></li>
+            <li><a href="#education" class="lang-zh">學歷</a><a href="#education" class="lang-en">Education</a></li>
+            <li><a href="#research-grants" class="lang-zh">研究計畫</a><a href="#research-grants" class="lang-en">Grants</a></li>
+            <li><a href="#skills" class="lang-zh">技能</a><a href="#skills" class="lang-en">Skills</a></li>
+            <li><a href="#invited-talks" class="lang-zh">演講記錄</a><a href="#invited-talks" class="lang-en">Talks</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Main CV content -->
+      <div class="cv-main">
     <div class="cv">
       {% comment %} Determine which CV format to render {% endcomment %}
       {% assign render_rendercv = false %}
@@ -466,6 +533,37 @@ layout: default
           </ul>
         </div>
       {% endif %}
-    </div>
+    </div><!-- .cv -->
+      </div><!-- .cv-main -->
+    </div><!-- .cv-layout -->
   </article>
 </div>
+
+<script>
+(function() {
+  var links = document.querySelectorAll('#cv-toc-list a');
+  var anchors = [];
+  links.forEach(function(a) {
+    var id = a.getAttribute('href').replace('#', '');
+    var el = document.getElementById(id);
+    if (el && !anchors.find(function(x){ return x.id === id; })) {
+      anchors.push({ id: id, el: el });
+    }
+  });
+
+  function update() {
+    var scrollY = window.scrollY + 120;
+    var active = null;
+    anchors.forEach(function(a) {
+      if (a.el.offsetTop <= scrollY) active = a.id;
+    });
+    links.forEach(function(a) {
+      var id = a.getAttribute('href').replace('#', '');
+      a.classList.toggle('cv-toc-active', id === active);
+    });
+  }
+
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+})();
+</script>

@@ -84,6 +84,18 @@
             </h6>
           {% endif %}
 
+          {% if entry.thesis or entry.thesis_en %}
+            <p class="ml-1 ml-md-4" style="font-size:0.85rem; color:#6B7280; margin-top:0.2rem; margin-bottom:0.1rem;">
+              <span class="lang-zh"><span style="font-weight:600;">論文：</span>{{ entry.thesis }}</span>
+              <span class="lang-en"><span style="font-weight:600;">Thesis: </span>{{ entry.thesis_en | default: entry.thesis }}</span>
+            </p>
+          {% endif %}
+          {% if entry.advisor or entry.advisor_en %}
+            <p class="ml-1 ml-md-4" style="font-size:0.85rem; color:#6B7280; margin-top:0; margin-bottom:0.1rem;">
+              <span class="lang-zh"><span style="font-weight:600;">指導教授：</span>{{ entry.advisor }}</span>
+              <span class="lang-en"><span style="font-weight:600;">Advisor: </span>{{ entry.advisor_en | default: entry.advisor }}</span>
+            </p>
+          {% endif %}
           {% if entry.courses or entry.highlights %}
             <ul class="items">
               {% for item in entry.courses %}

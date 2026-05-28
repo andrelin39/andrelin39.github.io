@@ -55,16 +55,34 @@
           {% endcapture %}
 
           {% if entry.url %}
-            <h6 class="title font-weight-bold ml-1 ml-md-4">
+            <h6 class="title font-weight-bold ml-1 ml-md-4" style="display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap;">
               <a href="{{ entry.url }}">
                 <span class="lang-zh">{{ position_title }}</span>
                 <span class="lang-en">{{ entry.position_en | default: position_title }}</span>
               </a>
+              {% if entry.tag %}
+                {% assign tag_style = "" %}
+                {% if entry.tag == "學術" %}{% assign tag_style = "background:#DBEAFE; color:#1D4ED8;" %}
+                {% elsif entry.tag == "業界" %}{% assign tag_style = "background:#FEF3C7; color:#92400E;" %}
+                {% elsif entry.tag == "產學" %}{% assign tag_style = "background:#D1FAE5; color:#065F46;" %}
+                {% endif %}
+                <span style="display:inline-block; font-size:0.6rem; font-weight:600; padding:2px 7px; border-radius:20px; {{ tag_style }} letter-spacing:0.02em; white-space:nowrap;">{{ entry.tag }}</span>
+              {% endif %}
             </h6>
           {% elsif position_title != '' %}
-            <h6 class="title font-weight-bold ml-1 ml-md-4">
-              <span class="lang-zh">{{ position_title }}</span>
-              <span class="lang-en">{{ entry.position_en | default: position_title }}</span>
+            <h6 class="title font-weight-bold ml-1 ml-md-4" style="display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap;">
+              <span>
+                <span class="lang-zh">{{ position_title }}</span>
+                <span class="lang-en">{{ entry.position_en | default: position_title }}</span>
+              </span>
+              {% if entry.tag %}
+                {% assign tag_style = "" %}
+                {% if entry.tag == "學術" %}{% assign tag_style = "background:#DBEAFE; color:#1D4ED8;" %}
+                {% elsif entry.tag == "業界" %}{% assign tag_style = "background:#FEF3C7; color:#92400E;" %}
+                {% elsif entry.tag == "產學" %}{% assign tag_style = "background:#D1FAE5; color:#065F46;" %}
+                {% endif %}
+                <span style="display:inline-block; font-size:0.6rem; font-weight:600; padding:2px 7px; border-radius:20px; {{ tag_style }} letter-spacing:0.02em; white-space:nowrap;">{{ entry.tag }}</span>
+              {% endif %}
             </h6>
           {% endif %}
 
