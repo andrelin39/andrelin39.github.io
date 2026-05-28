@@ -94,8 +94,8 @@ layout: default
       <aside class="cv-sidebar">
         <nav>
           <ul id="cv-toc-list">
-            <li><a href="#experience" class="lang-zh">工作經歷</a><a href="#experience" class="lang-en">Experience</a></li>
             <li><a href="#education" class="lang-zh">學歷</a><a href="#education" class="lang-en">Education</a></li>
+            <li><a href="#experience" class="lang-zh">工作經歷</a><a href="#experience" class="lang-en">Experience</a></li>
             <li><a href="#research-grants" class="lang-zh">研究計畫</a><a href="#research-grants" class="lang-en">Grants</a></li>
             <li><a href="#skills" class="lang-zh">技能</a><a href="#skills" class="lang-en">Skills</a></li>
           </ul>
@@ -210,6 +210,22 @@ layout: default
           </div>
         {% endif %}
 
+        <!-- Education (rendered before Experience) -->
+        {% assign edu_entries = cv.sections.Education %}
+        {% if edu_entries and edu_entries.size > 0 %}
+          <a class="anchor" id="education"></a>
+          <div class="card mt-3 p-3">
+            <h3 class="card-title font-weight-medium">
+              <span class="lang-zh">學歷</span>
+              <span class="lang-en">Education</span>
+            </h3>
+            <div>
+              {% assign entries = edu_entries %}
+              {% include cv/education.liquid %}
+            </div>
+          </div>
+        {% endif %}
+
         <!-- RenderCV Sections - Merge Experience and Volunteer -->
         {% comment %} First, combine Experience and Volunteer entries {% endcomment %}
         {% assign empty_array = '' | split: ',' %}
@@ -230,13 +246,13 @@ layout: default
           </div>
         {% endif %}
 
-        {% comment %} Now render all other sections except Experience and Volunteer {% endcomment %}
+        {% comment %} Now render all other sections except Experience, Volunteer, and Education {% endcomment %}
         {% for section_pair in cv.sections %}
           {% assign section_title = section_pair[0] %}
           {% assign section_entries = section_pair[1] %}
 
-          {% comment %} Skip Experience and Volunteer as we've already processed them combined {% endcomment %}
-          {% if section_title == 'Experience' or section_title == 'Volunteer' %}
+          {% comment %} Skip Experience, Volunteer, and Education as we've already processed them {% endcomment %}
+          {% if section_title == 'Experience' or section_title == 'Volunteer' or section_title == 'Education' %}
             {% continue %}
           {% endif %}
 

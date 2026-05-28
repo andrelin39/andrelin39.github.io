@@ -113,6 +113,7 @@ cv:
         studyType_en: Ph.D.
         start_date: 2004
         end_date: 2010
+        thesis: An empirical analysis of automobile insurance risk classification policies
 
     Research Grants:
       - title: 以大語言模型開發並驗證護理研究 EQUATOR 指引遵循度之自動化評估工具
