@@ -106,6 +106,25 @@ cv:
         start_date: 2004
         end_date: 2010
 
+    Research Grants:
+      # 尚無計畫——核准後依此格式新增，取消 # 即可啟用。區塊在有資料前不顯示。
+      #
+      # - title: 運用 AI 於產後護理品質提升之研究
+      #   title_en: AI-Assisted Quality Improvement in Postpartum Care
+      #   funder: 國家科學及技術委員會
+      #   funder_en: National Science and Technology Council (NSTC)
+      #   grant_number: NSTC 113-2410-H-XXX-XXX
+      #   role: 主持人
+      #   role_en: Principal Investigator (PI)
+      #   start_date: 2025-08
+      #   end_date: 2027-07
+      #   type: 專題研究計畫
+      #   type_en: Research Project Grant
+      #   status: ongoing          # ongoing | completed
+      #   amount:                  # 金額保留但不顯示於頁面
+      #   description: 探討 AI 工具於產後護理品質評估與改善的應用潛力。
+      #   description_en: Exploring AI applications for quality assessment and improvement in postpartum care.
+
     Skills:
       - name: 統計分析
         name_en: Statistical Analysis

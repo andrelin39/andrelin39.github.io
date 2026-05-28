@@ -174,6 +174,11 @@ layout: default
             {% continue %}
           {% endif %}
 
+          {% comment %} Skip sections with no entries (e.g. Research Grants before first grant) {% endcomment %}
+          {% if section_entries == nil or section_entries.size == 0 %}
+            {% continue %}
+          {% endif %}
+
           <a class="anchor" id="{{ section_title | slugify }}"></a>
           <div class="card mt-3 p-3">
             <h3 class="card-title font-weight-medium">
@@ -189,6 +194,7 @@ layout: default
                   {% when 'Honors and Awards' %}獎項
                   {% when 'Publications' %}論文發表
                   {% when 'Certificates' %}證照
+                  {% when 'Research Grants' %}研究計畫
                   {% when 'Projects' %}研究計畫
                   {% when 'Open Source Projects' %}開源專案
                   {% when 'References' %}推薦人
@@ -218,6 +224,9 @@ layout: default
               {% elsif section_title == 'Certificates' %}
                 {% assign entries = section_entries %}
                 {% include cv/certificates.liquid %}
+              {% elsif section_title == 'Research Grants' %}
+                {% assign entries = section_entries %}
+                {% include cv/grants.liquid %}
               {% elsif section_title == 'Projects' or section_title == 'Open Source Projects' %}
                 {% assign entries = section_entries %}
                 {% include cv/projects.liquid %}

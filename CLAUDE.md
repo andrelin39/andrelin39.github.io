@@ -54,6 +54,37 @@ featured: false
 
 3. 寫 Markdown 內文，`git add`、`commit`、`push origin main`
 
+### 新增研究計畫
+
+研究計畫放在 **CV 頁面**（`/cv/`），資料在 `_data/cv.yml` 的 `Research Grants` 區塊。
+
+**與「專案開發」的區別**：
+- `_data/cv.yml → Research Grants`：獲外部補助的正式研究案（國科會、IRB、機構計畫）
+- `_projects/`：自主開發成果（工具、書籍、研究方法），不需補助即可進行
+
+**計畫欄位**（參考 `cv.yml` 中的範例）：
+
+| 欄位 | 必填 | 說明 |
+|------|------|------|
+| `title` / `title_en` | 是 | 計畫名稱（中 / 英） |
+| `funder` / `funder_en` | 是 | 補助單位（如：國家科學及技術委員會） |
+| `grant_number` | 建議 | 計畫編號（如：NSTC 113-2410-H-XXX-XXX） |
+| `role` / `role_en` | 是 | 角色：主持人 / Co-PI / Co-Investigator |
+| `start_date` / `end_date` | 是 | 格式：`YYYY-MM` |
+| `type` / `type_en` | 是 | 計畫類型：專題研究計畫 / Research Project Grant |
+| `status` | 是 | `ongoing`（執行中）或 `completed`（已結案） |
+| `amount` | 選填 | **金額欄位不顯示於頁面**，僅供內部記錄 |
+| `description` / `description_en` | 選填 | 一句話簡述 |
+
+**新增計畫 SOP**：
+1. 計畫核准後，開啟 `_data/cv.yml`，找到 `Research Grants:` 區塊
+2. 複製範例格式（取消 `#` 即可），填入補助單位、編號、期間、角色等
+3. `amount` 欄位可填可不填，**不會顯示於頁面**
+4. `git add _data/cv.yml`、`commit`、`push`
+5. 計畫數量累積到 3 個以上時，可考慮抽出獨立頁面
+
+**空白處理**：`Research Grants` 區塊為空時，CV 頁面完全不顯示此區塊（不會出現「研究計畫（無）」）。
+
 ### 新增論文
 
 論文發表頁（`/publications/`）分為兩個分區，用 BibTeX 類型自動路由：
