@@ -72,7 +72,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/sharing/";
           },
-        },{id: "post-當-ai-開始替你完成研究-執行者到架構者",
+        },{id: "post-從零到完整-用-claude-code-建置學術個人網站的歷程紀錄",
+        
+          title: "從零到完整:用 Claude Code 建置學術個人網站的歷程紀錄",
+        
+        description: "一段關於工具、決策與協作節奏的學習筆記,記錄將學術身份數位化的完整過程。",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/academic-website-building-journey/";
+          
+        },
+      },{id: "post-當-ai-開始替你完成研究-執行者到架構者",
         
           title: "當 AI 開始替你完成研究：執行者到架構者",
         
