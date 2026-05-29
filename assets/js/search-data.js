@@ -72,7 +72,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/sharing/";
           },
-        },{id: "post-從零到完整-用-claude-code-建置學術個人網站的歷程紀錄",
+        },{id: "post-ai時代的學習提醒-不要和機器競爭-要成為定義問題的人",
+        
+          title: "AI時代的學習提醒：不要和機器競爭，要成為定義問題的人",
+        
+        description: "面對 AI 快速發展帶來的焦慮，我逐漸明白：被取代的是重複性的執行工作，而非研究者本身。真正稀缺的，是提出值得研究的問題、理解人類故事的能力。",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/ai-era-learning-reminder/";
+          
+        },
+      },{id: "post-從零到完整-用-claude-code-建置學術個人網站的歷程紀錄",
         
           title: "從零到完整:用 Claude Code 建置學術個人網站的歷程紀錄",
         
