@@ -20,6 +20,8 @@ profile:
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 
+giscus_comments: true # enables the comment section via giscus
+
 latest_posts:
   enabled: true
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
@@ -28,7 +30,7 @@ latest_posts:
 
 <div class="lang-zh" markdown="1">
 
-任職於**彰化基督教醫院**大數據暨數位 AI 應用中心（研究員），同時擔任**輔英科技大學**兼任教師。專注於醫療大數據分析、臨床研究設計與生物統計，以及 AI 於臨床研究的整合應用；長期協助醫療研究團隊進行資料分析、方法規劃與學術論文撰寫。
+任職於**彰化基督教醫院**大數據暨數位 AI 應用中心（研究員），同時擔任**輔英科技大學**兼任教師。專注於醫療大數據分析、臨床研究設計與生物統計，以及 AI 於臨床研究的整合應用；長期協助醫療研究團隊進行資料分析、方法規劃與學術論文發表。
 
 </div>
 

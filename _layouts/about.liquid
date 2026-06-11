@@ -74,7 +74,33 @@ layout: default
     </div>
   {% endif %}
 
+  <!-- Visitor stats -->
+  <div class="visitor-stats" style="text-align: center; font-size: 0.8rem; color: #9CA3AF; margin-top: 1rem;">
+    <span class="lang-zh">總瀏覽次數</span>
+    <span class="lang-en">Total Views</span>
+    <span id="busuanzi_container_site_pv">
+      <span id="busuanzi_value_site_pv"></span>
+    </span>
+    ·
+    <span class="lang-zh">訪客人數</span>
+    <span class="lang-en">Visitors</span>
+    <span id="busuanzi_container_site_uv">
+      <span id="busuanzi_value_site_uv"></span>
+    </span>
+  </div>
+
   {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
     {% include newsletter.liquid center=true %}
+  {% endif %}
+
+  <!-- Comments -->
+  {% if site.giscus and page.giscus_comments %}
+    <div class="about-section-block">
+      <h2 class="about-section-heading">
+        <span class="lang-zh">留言板</span>
+        <span class="lang-en">Comments</span>
+      </h2>
+    </div>
+    {% include giscus.liquid %}
   {% endif %}
 </div>
