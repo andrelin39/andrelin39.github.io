@@ -218,7 +218,7 @@ nav_order: 2
       </div>
       <hr class="pub-rule">
       <div class="publications pub-journal">
-        {% bibliography --query @article %}
+        {% bibliography --query @article --sort_by month --order descending %}
       </div>
     </section>
 
@@ -236,7 +236,7 @@ nav_order: 2
       </div>
       <hr class="pub-rule">
       <div class="publications pub-conf">
-        {% bibliography --query @inproceedings %}
+        {% bibliography --query @inproceedings --sort_by year --order descending %}
       </div>
     </section>
 
