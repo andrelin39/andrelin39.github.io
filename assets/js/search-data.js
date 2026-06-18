@@ -72,7 +72,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/sharing/";
           },
-        },{id: "post-ai時代的學習提醒-不要和機器競爭-要成為定義問題的人",
+        },{id: "post-研究工作流與-claude-code-skill-設計-討論記錄",
+        
+          title: "研究工作流與 Claude Code Skill 設計：討論記錄",
+        
+        description: "從資料清理節點的設計到 Skill 的本質意義，記錄一次關於 AI 時代研究工作流設計的思考過程。",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/research-workflow-skill-design/";
+          
+        },
+      },{id: "post-ai時代的學習提醒-不要和機器競爭-要成為定義問題的人",
         
           title: "AI時代的學習提醒：不要和機器競爭，要成為定義問題的人",
         
