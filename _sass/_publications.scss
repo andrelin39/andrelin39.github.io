@@ -33,14 +33,14 @@
     user-select: none;
 
     &::after {
-      content: ' ▾';
+      content: " ▾";
       font-size: 0.8em;
       display: inline-block;
       transition: transform 0.2s ease;
     }
 
     &.bib-collapsed::after {
-      content: ' ▸';
+      content: " ▸";
     }
   }
 
@@ -65,14 +65,14 @@
 
         abbr {
           display: inline-block;
-          background-color: #EDE9FE;
+          background-color: #ede9fe;
           margin-bottom: 0.5rem;
-          color: #6D28D9 !important;
+          color: #6d28d9 !important;
           border-radius: 4px;
           font-size: 11px;
 
           a {
-            color: #6D28D9;
+            color: #6d28d9;
 
             &:hover {
               text-decoration: none;

@@ -61,12 +61,17 @@
                 <span class="lang-en">{{ entry.position_en | default: position_title }}</span>
               </a>
               {% if entry.tag %}
-                {% assign tag_style = "" %}
-                {% if entry.tag == "學術" %}{% assign tag_style = "background:#DBEAFE; color:#1D4ED8;" %}
-                {% elsif entry.tag == "業界" %}{% assign tag_style = "background:#FEF3C7; color:#92400E;" %}
-                {% elsif entry.tag == "產學" %}{% assign tag_style = "background:#D1FAE5; color:#065F46;" %}
+                {% assign tag_style = '' %}
+                {% if entry.tag == '學術' -%}
+                  {%- assign tag_style = 'background:#DBEAFE; color:#1D4ED8;' %}
+                {% elsif entry.tag == '業界' -%}
+                  {%- assign tag_style = 'background:#FEF3C7; color:#92400E;' %}
+                {% elsif entry.tag == '產學' -%}
+                  {%- assign tag_style = 'background:#D1FAE5; color:#065F46;' %}
                 {% endif %}
-                <span style="display:inline-block; font-size:0.6rem; font-weight:600; padding:2px 7px; border-radius:20px; {{ tag_style }} letter-spacing:0.02em; white-space:nowrap;">{{ entry.tag }}</span>
+                <span style="display:inline-block; font-size:0.6rem; font-weight:600; padding:2px 7px; border-radius:20px; {{ tag_style }} letter-spacing:0.02em; white-space:nowrap;">
+                  {{- entry.tag -}}
+                </span>
               {% endif %}
             </h6>
           {% elsif position_title != '' %}
@@ -76,12 +81,17 @@
                 <span class="lang-en">{{ entry.position_en | default: position_title }}</span>
               </span>
               {% if entry.tag %}
-                {% assign tag_style = "" %}
-                {% if entry.tag == "學術" %}{% assign tag_style = "background:#DBEAFE; color:#1D4ED8;" %}
-                {% elsif entry.tag == "業界" %}{% assign tag_style = "background:#FEF3C7; color:#92400E;" %}
-                {% elsif entry.tag == "產學" %}{% assign tag_style = "background:#D1FAE5; color:#065F46;" %}
+                {% assign tag_style = '' %}
+                {% if entry.tag == '學術' -%}
+                  {%- assign tag_style = 'background:#DBEAFE; color:#1D4ED8;' %}
+                {% elsif entry.tag == '業界' -%}
+                  {%- assign tag_style = 'background:#FEF3C7; color:#92400E;' %}
+                {% elsif entry.tag == '產學' -%}
+                  {%- assign tag_style = 'background:#D1FAE5; color:#065F46;' %}
                 {% endif %}
-                <span style="display:inline-block; font-size:0.6rem; font-weight:600; padding:2px 7px; border-radius:20px; {{ tag_style }} letter-spacing:0.02em; white-space:nowrap;">{{ entry.tag }}</span>
+                <span style="display:inline-block; font-size:0.6rem; font-weight:600; padding:2px 7px; border-radius:20px; {{ tag_style }} letter-spacing:0.02em; white-space:nowrap;">
+                  {{- entry.tag -}}
+                </span>
               {% endif %}
             </h6>
           {% endif %}
@@ -93,10 +103,15 @@
             <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">
               <span class="lang-zh">{{ company_name }}</span>
               <span class="lang-en">
-                {% if entry.name_en %}{{ entry.name_en }}
-                {% elsif entry.company_en %}{{ entry.company_en }}
-                {% elsif entry.organization_en %}{{ entry.organization_en }}
-                {% else %}{{ company_name }}{% endif %}
+                {% if entry.name_en -%}
+                  {{- entry.name_en }}
+                {% elsif entry.company_en -%}
+                  {{- entry.company_en }}
+                {% elsif entry.organization_en -%}
+                  {{- entry.organization_en }}
+                {% else -%}
+                  {{- company_name -}}
+                {%- endif %}
               </span>
             </h6>
           {% endif %}
@@ -112,13 +127,17 @@
             <ul class="items">
               <span class="lang-zh">
                 {% for item in entry.highlights %}
-                  <li><span class="item">{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</span></li>
+                  <li>
+                    <span class="item">{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</span>
+                  </li>
                 {% endfor %}
               </span>
               <span class="lang-en">
                 {% assign en_highlights = entry.highlights_en | default: entry.highlights %}
                 {% for item in en_highlights %}
-                  <li><span class="item">{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</span></li>
+                  <li>
+                    <span class="item">{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</span>
+                  </li>
                 {% endfor %}
               </span>
             </ul>

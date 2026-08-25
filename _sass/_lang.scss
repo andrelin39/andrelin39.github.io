@@ -18,7 +18,9 @@ html[data-lang="en"] .lang-zh {
   font-weight: 700;
   line-height: 1.4;
   padding: 2px 7px;
-  transition: background-color 0.15s ease, color 0.15s ease;
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease;
 
   &:hover {
     background-color: var(--global-text-color);

@@ -31,12 +31,12 @@ github: https://github.com/andrelin39/andrelin39.github.io
 
 ## 技術棧
 
-| 工具 | 用途 |
-|:-----|:-----|
-| Jekyll + al-folio | 靜態網站框架與主題 |
-| GitHub Pages | 免費部署與 CDN |
-| GitHub Actions | 自動建置與部署 |
-| Claude Code | 開發協作、除錯、功能實作 |
+| 工具              | 用途                     |
+| :---------------- | :----------------------- |
+| Jekyll + al-folio | 靜態網站框架與主題       |
+| GitHub Pages      | 免費部署與 CDN           |
+| GitHub Actions    | 自動建置與部署           |
+| Claude Code       | 開發協作、除錯、功能實作 |
 
 ## 相關連結
 
@@ -61,12 +61,12 @@ This is the website you are currently browsing. From selecting the theme and des
 
 ## Tech Stack
 
-| Tool | Purpose |
-|:-----|:--------|
-| Jekyll + al-folio | Static site framework and theme |
-| GitHub Pages | Free hosting and CDN |
-| GitHub Actions | Automated build and deployment |
-| Claude Code | Development collaboration, debugging, feature implementation |
+| Tool              | Purpose                                                      |
+| :---------------- | :----------------------------------------------------------- |
+| Jekyll + al-folio | Static site framework and theme                              |
+| GitHub Pages      | Free hosting and CDN                                         |
+| GitHub Actions    | Automated build and deployment                               |
+| Claude Code       | Development collaboration, debugging, feature implementation |
 
 ## Links
 

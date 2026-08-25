@@ -67,9 +67,9 @@ body.sticky-bottom-footer {
 }
 
 .name-secondary {
-  font-size: 0.52em;       // ~22-24px relative to h1
+  font-size: 0.52em; // ~22-24px relative to h1
   font-weight: 400;
-  color: #6B7280;
+  color: #6b7280;
   margin-left: 1rem;
   display: inline-block;
   vertical-align: baseline; // align to main name's text baseline
@@ -79,12 +79,12 @@ body.sticky-bottom-footer {
 .about-top {
   display: flex;
   align-items: flex-start;
-  gap: 3rem;               // 48px between text and photo
+  gap: 3rem; // 48px between text and photo
 }
 
 .about-top-text {
   flex: 1;
-  min-width: 0;            // allow shrinking below content size
+  min-width: 0; // allow shrinking below content size
 }
 
 .about-top-photo {
@@ -93,7 +93,7 @@ body.sticky-bottom-footer {
   max-width: 280px;
 
   figure {
-    margin: 0;             // reset browser-default figure margin
+    margin: 0; // reset browser-default figure margin
   }
 
   img {
@@ -156,7 +156,7 @@ body.sticky-bottom-footer {
   font-size: 12px;
   padding: 4px 10px;
   border-radius: 4px;
-  background-color: #F3F4F6;
+  background-color: #f3f4f6;
   color: #374151 !important;
   line-height: 1.4;
 }
@@ -180,10 +180,10 @@ body.sticky-bottom-footer {
 // Homepage-only section spacing (narrower than other pages)
 .home-page {
   .about-section-block {
-    margin-top: 3.5rem;    // 56px — only applied on the homepage
+    margin-top: 3.5rem; // 56px — only applied on the homepage
   }
 
   .about-social {
-    margin-top: 2.75rem;   // 44px
+    margin-top: 2.75rem; // 44px
   }
 }

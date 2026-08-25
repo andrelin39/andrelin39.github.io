@@ -2,16 +2,17 @@
   {% for entry in entries %}
     <li class="list-group-item">
       <div class="row">
-
         <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column">
           <table class="table-cv">
             <tbody>
               <tr>
                 <td>
                   {% assign sy = entry.start_date | split: '-' | first %}
-                  {% assign ey = entry.end_date   | split: '-' | first | default: 'present' %}
-                  <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle"
-                        style="min-width: 75px; font-family: monospace;">
+                  {% assign ey = entry.end_date | split: '-' | first | default: 'present' %}
+                  <span
+                    class="badge font-weight-bold danger-color-dark text-uppercase align-middle"
+                    style="min-width: 75px; font-family: monospace;"
+                  >
                     {{ sy }}–{{ ey }}
                   </span>
                 </td>
@@ -20,16 +21,24 @@
                 <tr>
                   <td style="padding-top: 4px;">
                     {% if entry.status == 'ongoing' %}
-                      <span style="display:inline-block; font-size:0.65rem; font-weight:600;
-                                   padding:2px 8px; border-radius:20px;
-                                   background:#D1FAE5; color:#065F46;">
+                      <span
+                        style="
+                          display:inline-block; font-size:0.65rem; font-weight:600;
+                          padding:2px 8px; border-radius:20px;
+                          background:#D1FAE5; color:#065F46;
+                        "
+                      >
                         <span class="lang-zh">執行中</span>
                         <span class="lang-en">Ongoing</span>
                       </span>
                     {% elsif entry.status == 'completed' %}
-                      <span style="display:inline-block; font-size:0.65rem; font-weight:600;
-                                   padding:2px 8px; border-radius:20px;
-                                   background:#F3F4F6; color:#6B7280;">
+                      <span
+                        style="
+                          display:inline-block; font-size:0.65rem; font-weight:600;
+                          padding:2px 8px; border-radius:20px;
+                          background:#F3F4F6; color:#6B7280;
+                        "
+                      >
                         <span class="lang-zh">已結案</span>
                         <span class="lang-en">Completed</span>
                       </span>
@@ -50,13 +59,17 @@
           <h6 class="ml-1 ml-md-4" style="font-size: 0.875rem; color: #6B7280;">
             <span class="lang-zh">
               {{ entry.funder }}
-              {% if entry.grant_number %}&ensp;·&ensp;<span style="font-size:0.8rem; color:#9CA3AF;">{{ entry.grant_number }}</span>{% endif %}
+              {% if entry.grant_number -%}
+                &ensp;·&ensp;<span style="font-size:0.8rem; color:#9CA3AF;">{{ entry.grant_number }}</span>
+              {%- endif %}
               {% if entry.role %}&ensp;·&ensp;{{ entry.role }}{% endif %}
               {% if entry.type %}&ensp;·&ensp;{{ entry.type }}{% endif %}
             </span>
             <span class="lang-en">
               {{ entry.funder_en | default: entry.funder }}
-              {% if entry.grant_number %}&ensp;·&ensp;<span style="font-size:0.8rem; color:#9CA3AF;">{{ entry.grant_number }}</span>{% endif %}
+              {% if entry.grant_number -%}
+                &ensp;·&ensp;<span style="font-size:0.8rem; color:#9CA3AF;">{{ entry.grant_number }}</span>
+              {%- endif %}
               {% if entry.role_en %}&ensp;·&ensp;{{ entry.role_en }}{% elsif entry.role %}&ensp;·&ensp;{{ entry.role }}{% endif %}
               {% if entry.type_en %}&ensp;·&ensp;{{ entry.type_en }}{% elsif entry.type %}&ensp;·&ensp;{{ entry.type }}{% endif %}
             </span>
@@ -69,7 +82,6 @@
             </p>
           {% endif %}
         </div>
-
       </div>
     </li>
   {% endfor %}

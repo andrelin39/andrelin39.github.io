@@ -29,12 +29,12 @@ github: https://github.com/andrelin39/postpartum-satisfaction-coding
 
 ## 技術棧
 
-| 工具 / 技術 | 用途 |
-|:-----|:-----|
-| Python / LangChain | AI 工作流編排與 LLM API 整合 |
-| OpenAI GPT-4 / Claude | 核心語意分析與質性文本編碼引擎 |
+| 工具 / 技術           | 用途                                 |
+| :-------------------- | :----------------------------------- |
+| Python / LangChain    | AI 工作流編排與 LLM API 整合         |
+| OpenAI GPT-4 / Claude | 核心語意分析與質性文本編碼引擎       |
 | Pandas / Scikit-learn | 數據預處理、特徵工程與一致性指標計算 |
-| Matplotlib / Seaborn | 靜態圖表生成與探索性資料分析 (EDA) |
+| Matplotlib / Seaborn  | 靜態圖表生成與探索性資料分析 (EDA)   |
 
 ## 相關連結
 
@@ -57,12 +57,12 @@ This project leverages Generative AI and Large Language Models (LLMs) to automat
 
 ## Tech Stack
 
-| Tool / Tech | Purpose |
-|:-----|:--------|
-| Python / LangChain | AI pipeline orchestration and LLM API integration |
-| OpenAI GPT-4 / Claude | Core semantic analysis and qualitative coding engine |
+| Tool / Tech           | Purpose                                                             |
+| :-------------------- | :------------------------------------------------------------------ |
+| Python / LangChain    | AI pipeline orchestration and LLM API integration                   |
+| OpenAI GPT-4 / Claude | Core semantic analysis and qualitative coding engine                |
 | Pandas / Scikit-learn | Data preprocessing, feature engineering, and reliability evaluation |
-| Matplotlib / Seaborn | Static chart generation and Exploratory Data Analysis (EDA) |
+| Matplotlib / Seaborn  | Static chart generation and Exploratory Data Analysis (EDA)         |
 
 ## Links
 

@@ -2,13 +2,13 @@
 # the socials will be displayed in the order they are defined here
 # for more information, please refer to the documentation of jekyll-socials plugin: https://github.com/george-gca/jekyll-socials
 
-email: andrelin39@gmail.com    # 公開聯絡信箱
-github_username: andrelin39    # GitHub 帳號
-orcid_id: 0009-0001-0518-7818  # ORCID ID
-rss_icon: true                 # 顯示 RSS 訂閱圖示
+email: andrelin39@gmail.com # 公開聯絡信箱
+github_username: andrelin39 # GitHub 帳號
+orcid_id: 0009-0001-0518-7818 # ORCID ID
+rss_icon: true # 顯示 RSS 訂閱圖示
 
 # 以下欄位目前未啟用，有帳號時取消 # 即可顯示
-scholar_userid: cqaqsCsAAAAJ  # Google Scholar ID（網址中 user= 後的字串）
+scholar_userid: cqaqsCsAAAAJ # Google Scholar ID（網址中 user= 後的字串）
 # linkedin_username:           # LinkedIn 個人頁網址最後一段
 # twitter_username:            # Twitter/X 帳號（不含 @）
-cv_pdf: /assets/pdf/cv.pdf   # CV PDF 路徑
+cv_pdf: /assets/pdf/cv.pdf # CV PDF 路徑

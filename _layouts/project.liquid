@@ -2,10 +2,8 @@
 layout: default
 ---
 <div class="post">
-
   {%- comment -%} ── Project Header ── {%- endcomment -%}
   <header class="post-header mb-4">
-
     {%- comment -%} Title {%- endcomment -%}
     <h1 class="post-title">
       {% if page.title_en %}
@@ -34,24 +32,36 @@ layout: default
         <span class="badge badge-pill badge-secondary text-capitalize">
           <span class="lang-zh">
             {% case page.category %}
-              {% when 'research' %}研究專案
-              {% when 'teaching' %}教學講義
-              {% when 'tools' %}實用工具
-              {% else %}{{ page.category }}
+              {% when 'research' -%}
+                研究專案
+              {% when 'teaching' -%}
+                教學講義
+              {% when 'tools' -%}
+                實用工具
+              {% else -%}
+                {{- page.category }}
             {% endcase %}
           </span>
           <span class="lang-en">{{ page.category }}</span>
         </span>
       {% endif %}
       {% if page.github %}
-        <a href="{{ page.github }}" target="_blank" rel="noopener noreferrer"
-           class="btn btn-sm btn-outline-dark">
+        <a
+          href="{{ page.github }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-sm btn-outline-dark"
+        >
           GitHub
         </a>
       {% endif %}
       {% if page.google_drive %}
-        <a href="{{ page.google_drive }}" target="_blank" rel="noopener noreferrer"
-           class="btn btn-sm btn-outline-dark">
+        <a
+          href="{{ page.google_drive }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-sm btn-outline-dark"
+        >
           Google Drive
         </a>
       {% endif %}
@@ -68,5 +78,4 @@ layout: default
   {% if site.giscus and page.giscus_comments %}
     {% include giscus.liquid %}
   {% endif %}
-
 </div>

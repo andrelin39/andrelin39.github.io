@@ -212,11 +212,11 @@ details.t-past > summary:hover { color: #6B7280; }
 {% assign cats_en = "Statistics & Research Methods|Nursing & Medicine|Health Policy & Economics|Education & Teaching" | split: "|" %}
 
 {% for i in (0..3) %}
-  {% assign cat    = cats[i] %}
-  {% assign cat_en = cats_en[i] %}
-  {% assign cat_courses = site.data.courses.courses | where: "subject_category", cat %}
-  {% if cat_courses.size == 0 %}{% continue %}{% endif %}
-  {% assign subjects = cat_courses | map: "title" | uniq %}
+{% assign cat    = cats[i] %}
+{% assign cat_en = cats_en[i] %}
+{% assign cat_courses = site.data.courses.courses | where: "subject_category", cat %}
+{% if cat_courses.size == 0 %}{% continue %}{% endif %}
+{% assign subjects = cat_courses | map: "title" | uniq %}
 
 <section class="t-section">
   <h3 class="t-cat-title">{{ cat }}</h3>
@@ -310,6 +310,7 @@ details.t-past > summary:hover { color: #6B7280; }
         </div>
       </div>
     {% endfor %}
+
   </div>
 </section>
 

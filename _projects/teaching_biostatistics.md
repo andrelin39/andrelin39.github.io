@@ -11,12 +11,12 @@ category: teaching
 
 ## 課程資訊
 
-| 項目 | 內容 |
-|:-----|:-----|
-| 開課機構 | 輔英科技大學 |
-| 修課對象 | 護理系大學部 |
+| 項目     | 內容           |
+| :------- | :------------- |
+| 開課機構 | 輔英科技大學   |
+| 修課對象 | 護理系大學部   |
 | 開課學期 | 每學年第一學期 |
-| 課程性質 | 必修 |
+| 課程性質 | 必修           |
 
 ## 課程描述
 
@@ -61,5 +61,5 @@ category: teaching
 
 ## 參考資源
 
-- Dawson, B., & Trapp, R. G. (2004). *Basic & Clinical Biostatistics* (4th ed.). McGraw-Hill.
-- 陳順宇 (2011)。*統計學*。華泰文化。
+- Dawson, B., & Trapp, R. G. (2004). _Basic & Clinical Biostatistics_ (4th ed.). McGraw-Hill.
+- 陳順宇 (2011)。_統計學_。華泰文化。

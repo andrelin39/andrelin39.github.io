@@ -173,8 +173,8 @@ nav: false
 {% assign sorted_cats = site.data.talks.categories | sort: "order" %}
 
 {% for cat in sorted_cats %}
-  {% assign cat_talks = all_talks | where: "category", cat.id | sort: "date" | reverse %}
-  {% if cat_talks.size == 0 %}{% continue %}{% endif %}
+{% assign cat_talks = all_talks | where: "category", cat.id | sort: "date" | reverse %}
+{% if cat_talks.size == 0 %}{% continue %}{% endif %}
 
 <section class="tk-section">
   <div class="tk-cat-banner">
@@ -276,6 +276,7 @@ nav: false
 
       </div>
     {% endfor %}
+
   </div>
 </section>
 

@@ -8,10 +8,25 @@ layout: default
         <h1 class="post-title">
           {% if site.title == 'blank' %}
             {% if site.name_zh %}
-              <span class="lang-zh"><span class="name-main">{{ site.name_zh }}</span><span class="name-secondary">{{ site.first_name }}{% if site.middle_name %} {{ site.middle_name }}{% endif %} {{ site.last_name }}</span></span>
-              <span class="lang-en"><span class="name-main">{{ site.first_name }}{% if site.middle_name %} {{ site.middle_name }}{% endif %} {{ site.last_name }}</span><span class="name-secondary">{{ site.name_zh }}</span></span>
+              <span class="lang-zh"
+                ><span class="name-main">{{ site.name_zh }}</span
+                ><span class="name-secondary">
+                  {{- site.first_name -}}
+                  {%- if site.middle_name %} {{ site.middle_name }}{% endif %}
+                  {{ site.last_name -}}
+                </span></span
+              >
+              <span class="lang-en"
+                ><span class="name-main">
+                  {{- site.first_name -}}
+                  {%- if site.middle_name %} {{ site.middle_name }}{% endif %}
+                  {{ site.last_name -}}</span
+                ><span class="name-secondary">{{ site.name_zh }}</span></span
+              >
             {% else %}
-              <span class="font-weight-bold">{{ site.first_name }}</span>{% if site.middle_name %} {{ site.middle_name }}{% endif %} {{ site.last_name }}
+              <span class="font-weight-bold">{{ site.first_name }}</span>
+              {%- if site.middle_name %} {{ site.middle_name }}{% endif %}
+              {{ site.last_name }}
             {% endif %}
           {% else %}
             {{ site.title }}
@@ -19,7 +34,9 @@ layout: default
         </h1>
         <p class="desc">
           <span class="lang-zh">{{ page.subtitle }}</span>
-          {% if page.subtitle_en %}<span class="lang-en">{{ page.subtitle_en }}</span>{% endif %}
+          {% if page.subtitle_en -%}
+            <span class="lang-en">{{ page.subtitle_en }}</span>
+          {%- endif %}
         </p>
       </header>
       <div class="about-body">{{ content }}</div>

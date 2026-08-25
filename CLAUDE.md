@@ -18,17 +18,18 @@
 
 ## 網站七大區塊與對應檔案
 
-| 區塊 | 設定頁面 | 內容來源 |
-|------|----------|----------|
-| 首頁 / About | `_pages/about.md` | 個人簡介、精選論文、最新消息 |
-| Blog（含三個子分類） | `_pages/blog.md`、`_pages/blog_notes.md`、`_pages/blog_sharing.md`、`_pages/blog_thoughts.md` | `_posts/YYYY-MM-DD-*.md` |
-| Publications（論文） | `_pages/publications.md` | `_bibliography/papers.bib` |
-| Projects（專案） | `_pages/projects.md` | `_projects/*.md`（category ≠ teaching） |
-| 教學講義 | `_pages/teaching.md` | `_data/courses.yml` |
-| **演講邀約** | **`_pages/talks.md`** | **`_data/talks.yml`** |
-| CV | `_pages/cv.md` | `_data/cv.yml`（演講記錄自動從 `_data/talks.yml` 讀取） |
+| 區塊                 | 設定頁面                                                                                      | 內容來源                                                |
+| -------------------- | --------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
+| 首頁 / About         | `_pages/about.md`                                                                             | 個人簡介、精選論文、最新消息                            |
+| Blog（含三個子分類） | `_pages/blog.md`、`_pages/blog_notes.md`、`_pages/blog_sharing.md`、`_pages/blog_thoughts.md` | `_posts/YYYY-MM-DD-*.md`                                |
+| Publications（論文） | `_pages/publications.md`                                                                      | `_bibliography/papers.bib`                              |
+| Projects（專案）     | `_pages/projects.md`                                                                          | `_projects/*.md`（category ≠ teaching）                 |
+| 教學講義             | `_pages/teaching.md`                                                                          | `_data/courses.yml`                                     |
+| **演講邀約**         | **`_pages/talks.md`**                                                                         | **`_data/talks.yml`**                                   |
+| CV                   | `_pages/cv.md`                                                                                | `_data/cv.yml`（演講記錄自動從 `_data/talks.yml` 讀取） |
 
 Blog 文章依 `categories` 欄位路由到不同子頁：
+
 - `categories: notes` → 學習筆記（/notes/）
 - `categories: sharing` → 文章分享（/sharing/）
 - `categories: thoughts` → 心情隨想（/thoughts/）
@@ -47,7 +48,7 @@ title: 文章標題（中文可）
 date: 2026-01-01 08:00:00 +0800
 description: 一句話摘要（會顯示在列表）
 tags: 標籤1 標籤2
-categories: notes   # notes | sharing | thoughts
+categories: notes # notes | sharing | thoughts
 featured: false
 ---
 ```
@@ -59,24 +60,26 @@ featured: false
 研究計畫放在 **CV 頁面**（`/cv/`），資料在 `_data/cv.yml` 的 `Research Grants` 區塊。
 
 **與「專案開發」的區別**：
+
 - `_data/cv.yml → Research Grants`：獲外部補助的正式研究案（國科會、IRB、機構計畫）
 - `_projects/`：自主開發成果（工具、書籍、研究方法），不需補助即可進行
 
 **計畫欄位**（參考 `cv.yml` 中的範例）：
 
-| 欄位 | 必填 | 說明 |
-|------|------|------|
-| `title` / `title_en` | 是 | 計畫名稱（中 / 英） |
-| `funder` / `funder_en` | 是 | 補助單位（如：國家科學及技術委員會） |
-| `grant_number` | 建議 | 計畫編號（如：NSTC 113-2410-H-XXX-XXX） |
-| `role` / `role_en` | 是 | 角色：主持人 / Co-PI / Co-Investigator |
-| `start_date` / `end_date` | 是 | 格式：`YYYY-MM` |
-| `type` / `type_en` | 是 | 計畫類型：專題研究計畫 / Research Project Grant |
-| `status` | 是 | `ongoing`（執行中）或 `completed`（已結案） |
-| `amount` | 選填 | **金額欄位不顯示於頁面**，僅供內部記錄 |
-| `description` / `description_en` | 選填 | 一句話簡述 |
+| 欄位                             | 必填 | 說明                                            |
+| -------------------------------- | ---- | ----------------------------------------------- |
+| `title` / `title_en`             | 是   | 計畫名稱（中 / 英）                             |
+| `funder` / `funder_en`           | 是   | 補助單位（如：國家科學及技術委員會）            |
+| `grant_number`                   | 建議 | 計畫編號（如：NSTC 113-2410-H-XXX-XXX）         |
+| `role` / `role_en`               | 是   | 角色：主持人 / Co-PI / Co-Investigator          |
+| `start_date` / `end_date`        | 是   | 格式：`YYYY-MM`                                 |
+| `type` / `type_en`               | 是   | 計畫類型：專題研究計畫 / Research Project Grant |
+| `status`                         | 是   | `ongoing`（執行中）或 `completed`（已結案）     |
+| `amount`                         | 選填 | **金額欄位不顯示於頁面**，僅供內部記錄          |
+| `description` / `description_en` | 選填 | 一句話簡述                                      |
 
 **新增計畫 SOP**：
+
 1. 計畫核准後，開啟 `_data/cv.yml`，找到 `Research Grants:` 區塊
 2. 複製範例格式（取消 `#` 即可），填入補助單位、編號、期間、角色等
 3. `amount` 欄位可填可不填，**不會顯示於頁面**
@@ -88,6 +91,7 @@ featured: false
 ### 新增論文
 
 論文發表頁（`/publications/`）分為兩個分區，用 BibTeX 類型自動路由：
+
 - **期刊論文**用 `@article`，放 `_bibliography/papers.bib` 上半部
 - **研討會論文**用 `@inproceedings`，放 `_bibliography/papers.bib` 下半部（`%% ---- Conference Papers ----` 區塊）
 
@@ -101,22 +105,24 @@ featured: false
 
 研討會論文必填欄位：
 
-| 欄位 | 說明 | 範例 |
-|------|------|------|
-| `booktitle` | 研討會全名 | `台灣護理學會年度學術研討會` |
-| `address` | 舉辦地點 | `台北，台灣` |
-| `year` | 年份 | `2025` |
-| `month` | 月份 | `Oct` |
-| `abbr` | 發表類型（決定左側徽章顏色） | `Oral` / `Poster` / `Keynote` / `Invited` |
-| `note` | 完整類型說明（顯示在卡片） | `Oral Presentation` |
+| 欄位        | 說明                         | 範例                                      |
+| ----------- | ---------------------------- | ----------------------------------------- |
+| `booktitle` | 研討會全名                   | `台灣護理學會年度學術研討會`              |
+| `address`   | 舉辦地點                     | `台北，台灣`                              |
+| `year`      | 年份                         | `2025`                                    |
+| `month`     | 月份                         | `Oct`                                     |
+| `abbr`      | 發表類型（決定左側徽章顏色） | `Oral` / `Poster` / `Keynote` / `Invited` |
+| `note`      | 完整類型說明（顯示在卡片）   | `Oral Presentation`                       |
 
 `abbr` 欄位可選值與對應徽章顏色：
+
 - `Oral` → 淺橘底 `#FED7AA` + 深橘字 `#9A3412`
 - `Poster` → 淺青底 `#A7F3D0` + 深青字 `#065F46`
 - `Keynote` → 淺紫底 `#DDD6FE` + 深紫字 `#5B21B6`
 - `Invited` → 淺粉底 `#FBCFE8` + 深粉字 `#9D174D`
 
 新增研討會論文 SOP：
+
 1. 從研討會官網取得正式名稱（`booktitle`）
 2. 確認發表類型（Oral / Poster / Keynote / Invited）
 3. 整理 BibTeX，參考 `papers.bib` 中的 `lin2025example` 範例格式
@@ -131,6 +137,7 @@ featured: false
 - **搜尋框增強**：`bibsearch.js` 支援標題、作者、期刊、年份即時過濾；搜尋時顯示「找到 X 筆結果」
 
 未來論文超過 50 篇時，可考慮新增：
+
 - 「最近 5 年」/ 「全部」切換按鈕
 - 期刊影響因子標籤（手動維護 `_data/venues.yml`）
 - 引用次數排序（需要 Google Scholar API 或手動更新 `_data/citations.yml`）
@@ -138,6 +145,7 @@ featured: false
 ### 新增專案（research / tools）
 
 **檔名命名規則**：`{importance}_{slug}.md`，例如 `1_bigdata-pipeline.md`
+
 - 數字對應 `importance` 欄位（決定同分類內的排序，1 最前）
 - slug 用英文小寫 + 連字號，不含中文
 
@@ -152,44 +160,45 @@ cover_title: 卡片顯示的短標題（選填，省略用 title）
 cover_title_en: Card Short Title (optional)
 description: 中文一行簡述
 description_en: One-line English description
-img: assets/img/projects/filename.png   # 省略則無縮圖
-importance: 1          # 同 category 內排序，數字越小越前
-year: 2026             # 專案年份，用於統計區塊「持續更新」顯示最新年份
-category: research     # research | tools（teaching 專案用獨立頁面）
-status: in_progress    # in_progress | completed | maintained
-project_type: research_method   # 見下方 project_type 表
-type_label: 研究方法           # 卡片上顯示的中文類型小標
-type_label_en: Research Method  # 英文版類型小標
-github: https://github.com/andrelin39/repo   # 選填
-google_drive: https://drive.google.com/...   # 選填，顯示「資料 ↗」按鈕
+img: assets/img/projects/filename.png # 省略則無縮圖
+importance: 1 # 同 category 內排序，數字越小越前
+year: 2026 # 專案年份，用於統計區塊「持續更新」顯示最新年份
+category: research # research | tools（teaching 專案用獨立頁面）
+status: in_progress # in_progress | completed | maintained
+project_type: research_method # 見下方 project_type 表
+type_label: 研究方法 # 卡片上顯示的中文類型小標
+type_label_en: Research Method # 英文版類型小標
+github: https://github.com/andrelin39/repo # 選填
+google_drive: https://drive.google.com/... # 選填，顯示「資料 ↗」按鈕
 ---
 ```
 
 **Category 可用值**：
 
-| 值 | 顯示（中） | 顯示（英） |
-|----|----------|----------|
-| `research` | 研究專案 | Research Projects |
-| `tools` | 實用工具 | Practical Tools |
+| 值         | 顯示（中） | 顯示（英）        |
+| ---------- | ---------- | ----------------- |
+| `research` | 研究專案   | Research Projects |
+| `tools`    | 實用工具   | Practical Tools   |
 
 **Status 標籤**（卡片右上角 pill）：
 
-| status | 中文顯示 | 英文顯示 | 背景色 | 文字色 |
-|--------|---------|---------|-------|-------|
-| `in_progress` | 進行中 | In Progress | `#FEF3C7` | `#92400E` |
-| `completed` | 已完成 | Completed | `#D1FAE5` | `#065F46` |
-| `maintained` | 持續維護 | Maintained | `#DBEAFE` | `#1E40AF` |
+| status        | 中文顯示 | 英文顯示    | 背景色    | 文字色    |
+| ------------- | -------- | ----------- | --------- | --------- |
+| `in_progress` | 進行中   | In Progress | `#FEF3C7` | `#92400E` |
+| `completed`   | 已完成   | Completed   | `#D1FAE5` | `#065F46` |
+| `maintained`  | 持續維護 | Maintained  | `#DBEAFE` | `#1E40AF` |
 
 **project_type 分類**（卡片標題下方灰色小標）：
 
-| project_type | type_label（中） | type_label_en（英） | 適用情境 |
-|---|---|---|---|
-| `research_method` | 研究方法 | Research Method | LLM 編碼、統計流程等方法學研究 |
-| `book` | 書籍撰寫 | Book Writing | 書稿、教材撰寫 |
-| `website` | 網站建置 | Website | 個人網站、專案網站 |
-| `tool` | 實用工具 | Tool | 瀏覽器工具、CLI、腳本等 |
+| project_type      | type_label（中） | type_label_en（英） | 適用情境                       |
+| ----------------- | ---------------- | ------------------- | ------------------------------ |
+| `research_method` | 研究方法         | Research Method     | LLM 編碼、統計流程等方法學研究 |
+| `book`            | 書籍撰寫         | Book Writing        | 書稿、教材撰寫                 |
+| `website`         | 網站建置         | Website             | 個人網站、專案網站             |
+| `tool`            | 實用工具         | Tool                | 瀏覽器工具、CLI、腳本等        |
 
 **圖片規範**：
+
 - 路徑：`assets/img/projects/` 下，副檔名 `.png` / `.jpg`
 - 建議尺寸：**1200×630 px**（16:9），最小 800×420
 - 暫無圖：直接省略 `img:` 欄位，卡片自動無圖顯示
@@ -208,6 +217,7 @@ English content
 ```
 
 **SOP**：
+
 1. 在 `_projects/` 新增 `{n}_{slug}.md`（參考 `1_example.md`）
 2. 把縮圖放到 `assets/img/projects/`（選填）
 3. `git add _projects/ assets/img/projects/`、`commit`、`push`
@@ -223,7 +233,7 @@ title: 課程中文名稱
 title_en: Course English Name
 description: 開課機構 · 修課對象
 description_en: Institution · Target Audience
-img: assets/img/projects/course-thumb.png   # 選填
+img: assets/img/projects/course-thumb.png # 選填
 importance: 1
 category: teaching
 ---
@@ -268,6 +278,7 @@ git push origin main
 ## 我的角色背景
 
 學術研究員（彰化基督教醫院大數據暨數位AI應用中心），主要工作：
+
 - 文獻回顧（系統性回顧、Meta-analysis）
 - 統計分析（臨床研究、大數據）
 - 醫學寫作與翻譯（中英文）
@@ -294,19 +305,21 @@ git push origin main
 
 ### 學期代碼
 
-| 代碼 | 學期 |
-|------|------|
-| 1 | 上學期 |
-| 2 | 下學期 |
-| S | 暑期 |
-| W | 寒期 |
+| 代碼 | 學期   |
+| ---- | ------ |
+| 1    | 上學期 |
+| 2    | 下學期 |
+| S    | 暑期   |
+| W    | 寒期   |
 
 ### 命名格式
 
 **課程資料夾**：`[學期]_[課程]_[學校簡稱][學制][系所]`
+
 - 範例：`114-1_生物統計學_輔英進二技護理`
 
 **講義檔案**：`[主題]_[日期].pdf`
+
 - 範例：`假設檢定_20251015.pdf`
 
 ### 課程資料夾連結策略
@@ -335,23 +348,24 @@ git push origin main
   date: YYYY-MM-DD
   title: 中文講題
   title_en: English Title
-  type: invited_talk     # invited_talk | training | invited_speech
+  type: invited_talk # invited_talk | training | invited_speech
   organization: 機構中文名
   organization_en: Organization English Name
   location: 縣市（例：彰化縣彰化市）
   location_en: City, County (e.g., Changhua City, Changhua County)
-  category: ai_applications   # 見類別歸屬規則
-  slides_folder: "TBD_YYYY-MM-slug"  # Google Drive 資料夾連結；填 TBD_xxx 時顯示「整理中」
-  slides:       # 單份講綱 PDF 連結（留空不顯示）
-  photo:        # 活動照片連結（留空不顯示）
-  video:        # 影片連結（留空不顯示）
-  news:         # 新聞報導連結（留空不顯示）
-  event_page:   # 活動頁面連結（留空不顯示）
-  abstract:     # 一兩句講題簡述（選填）
-  internal: true   # 如為內部資料，加此行；省略則不加
+  category: ai_applications # 見類別歸屬規則
+  slides_folder: "TBD_YYYY-MM-slug" # Google Drive 資料夾連結；填 TBD_xxx 時顯示「整理中」
+  slides: # 單份講綱 PDF 連結（留空不顯示）
+  photo: # 活動照片連結（留空不顯示）
+  video: # 影片連結（留空不顯示）
+  news: # 新聞報導連結（留空不顯示）
+  event_page: # 活動頁面連結（留空不顯示）
+  abstract: # 一兩句講題簡述（選填）
+  internal: true # 如為內部資料，加此行；省略則不加
 ```
 
 新增後，以下三處**自動更新**，無需手動改：
+
 - `/talks/` 頁面統計數字（場次、年數、單位、縣市）
 - `/talks/` 分類列表
 - `/cv/` 演講記錄（APA 格式引用）
@@ -374,28 +388,30 @@ git push origin main
 
 ### 類別歸屬規則
 
-| 類別 id | 適用情境 |
-|---------|--------|
-| `ai_applications` | AI 工具教學、辦公自動化、資料分析應用 |
-| `research` | 護理研究、學術方法、文獻管理（JCR 等） |
-| `ai_ethics` | AI 倫理、法律與 AI、跨領域議題 |
+| 類別 id           | 適用情境                               |
+| ----------------- | -------------------------------------- |
+| `ai_applications` | AI 工具教學、辦公自動化、資料分析應用  |
+| `research`        | 護理研究、學術方法、文獻管理（JCR 等） |
+| `ai_ethics`       | AI 倫理、法律與 AI、跨領域議題         |
 
 若不屬於現有類別，在 `_data/talks.yml` 的 `categories:` 新增一個項目，指定新的 `id`、`name`、`name_en`、`order`。
 
 ### 演講類型說明
 
-| type | 中文顯示 | 顏色標籤 |
-|------|--------|--------|
-| `invited_talk` | 專題演講 | 淺紫 |
-| `training` | 教育訓練 | 淺橘 |
-| `invited_speech` | 受邀演講 | 淺藍 |
+| type             | 中文顯示 | 顏色標籤 |
+| ---------------- | -------- | -------- |
+| `invited_talk`   | 專題演講 | 淺紫     |
+| `training`       | 教育訓練 | 淺橘     |
+| `invited_speech` | 受邀演講 | 淺藍     |
 
 ### 內部資料處理
 
 對於不宜公開講綱的演講（如院內訓練），在 `talks.yml` 加：
+
 ```yaml
 internal: true
 ```
+
 該場次仍顯示在列表，但不顯示任何連結，改顯示「內部資料」字樣。
 
 ## 視覺設計規範
@@ -418,104 +434,112 @@ internal: true
 
 ```css
 /* 左側色條 + 縮排 */
-border-left: 4px solid var(--global-theme-color, #526EB4);
+border-left: 4px solid var(--global-theme-color, #526eb4);
 padding-left: 16px;
 
 /* 中文主標題 */
-font-size: 2rem;        /* 32px，可至 2.25rem */
+font-size: 2rem; /* 32px，可至 2.25rem */
 font-weight: 700;
 color: #111827;
 letter-spacing: -0.02em;
 line-height: 1.15;
 
 /* 英文副標（緊接主標題下方） */
-font-size: 0.875rem;    /* 14px */
-color: #9CA3AF;
+font-size: 0.875rem; /* 14px */
+color: #9ca3af;
 font-weight: 400;
 ```
 
 實作範例（HTML 結構）：
+
 ```html
-<div class="section-banner">           <!-- 包住色條 + 文字 -->
+<div class="section-banner">
+  <!-- 包住色條 + 文字 -->
   <h3 class="section-title">
     <span class="lang-zh">中文類別名稱</span>
     <span class="lang-en">English Category Name</span>
   </h3>
   <span class="section-sub">
-    <span class="lang-zh">English Category Name</span>   <!-- ZH 模式顯示英文副標 -->
-    <span class="lang-en">中文類別名稱</span>            <!-- EN 模式顯示中文副標 -->
+    <span class="lang-zh">English Category Name</span>
+    <!-- ZH 模式顯示英文副標 -->
+    <span class="lang-en">中文類別名稱</span>
+    <!-- EN 模式顯示中文副標 -->
   </span>
 </div>
-<hr style="border-top: 1px solid #E5E7EB; margin: 1.25rem 0 0 0;">
+<hr style="border-top: 1px solid #E5E7EB; margin: 1.25rem 0 0 0;" />
 ```
 
 ### 內容條目排版
 
-| 元素 | 字級 | 字重 | 顏色 |
-|------|------|------|------|
-| 條目標題（講題、論文標題） | 18px（`1.125rem`） | 600 | `#1F2937` |
-| 機構 / 期刊名稱 | 13px（`0.8125rem`） | 400 | `#9CA3AF` |
-| 地點 / 日期等次要資訊 | 13px（`0.8125rem`） | 400 | `#9CA3AF` |
-| 類型標籤（pill） | 11px（`0.6875rem`） | 500 | 依類型色碼 |
-| 日期（等寬字體） | 12.8px（`0.8rem`） | 400 | `#6B7280` |
+| 元素                       | 字級                | 字重 | 顏色       |
+| -------------------------- | ------------------- | ---- | ---------- |
+| 條目標題（講題、論文標題） | 18px（`1.125rem`）  | 600  | `#1F2937`  |
+| 機構 / 期刊名稱            | 13px（`0.8125rem`） | 400  | `#9CA3AF`  |
+| 地點 / 日期等次要資訊      | 13px（`0.8125rem`） | 400  | `#9CA3AF`  |
+| 類型標籤（pill）           | 11px（`0.6875rem`） | 500  | 依類型色碼 |
+| 日期（等寬字體）           | 12.8px（`0.8rem`）  | 400  | `#6B7280`  |
 
 日期使用等寬字體以對齊：
+
 ```css
 font-family: "Menlo", "Monaco", "Consolas", "Liberation Mono", monospace;
 ```
 
 ### 間距規範
 
-| 位置 | 值 |
-|------|----|
-| Section 與 Section 之間 | `5rem`（80px） |
-| 類別標題到第一筆內容 | `2rem`（32px） |
-| 條目內部上下 padding | `1.25rem 0` |
-| 條目分隔線顏色 | `#E5E7EB`（最後一筆不加線） |
-| 統計區塊底部 border | `1px solid #E5E7EB` |
+| 位置                    | 值                          |
+| ----------------------- | --------------------------- |
+| Section 與 Section 之間 | `5rem`（80px）              |
+| 類別標題到第一筆內容    | `2rem`（32px）              |
+| 條目內部上下 padding    | `1.25rem 0`                 |
+| 條目分隔線顏色          | `#E5E7EB`（最後一筆不加線） |
+| 統計區塊底部 border     | `1px solid #E5E7EB`         |
 
 ### 類型標籤（Pill）色碼
 
 **演講類型 pill（talks.md）**：
 
-| 語意 | 背景色 | 文字色 | 適用場景 |
-|------|--------|--------|--------|
-| 主要 / 受邀 | `#EDE9FE` | `#5B21B6` | 專題演講（invited_talk） |
-| 訓練 / 一般 | `#FFEDD5` | `#C2410C` | 教育訓練（training） |
+| 語意        | 背景色    | 文字色    | 適用場景                   |
+| ----------- | --------- | --------- | -------------------------- |
+| 主要 / 受邀 | `#EDE9FE` | `#5B21B6` | 專題演講（invited_talk）   |
+| 訓練 / 一般 | `#FFEDD5` | `#C2410C` | 教育訓練（training）       |
 | 次要 / 邀請 | `#DBEAFE` | `#1D4ED8` | 受邀演講（invited_speech） |
 
 **專案狀態 pill（projects.md）**：
 
-| status | 背景色 | 文字色 |
-|--------|--------|--------|
-| `in_progress`（進行中） | `#FEF3C7` | `#92400E` |
-| `completed`（已完成） | `#D1FAE5` | `#065F46` |
+| status                   | 背景色    | 文字色    |
+| ------------------------ | --------- | --------- |
+| `in_progress`（進行中）  | `#FEF3C7` | `#92400E` |
+| `completed`（已完成）    | `#D1FAE5` | `#065F46` |
 | `maintained`（持續維護） | `#DBEAFE` | `#1E40AF` |
 
 ### 按鈕樣式
 
 **主要行動按鈕**（演講資料、課程資料夾）：
+
 ```css
-border: 1px solid var(--global-theme-color, #526EB4);
-color: var(--global-theme-color, #526EB4);
+border: 1px solid var(--global-theme-color, #526eb4);
+color: var(--global-theme-color, #526eb4);
 /* hover */
 background: var(--global-theme-color);
 color: #fff;
 ```
 
 **次要按鈕**（講綱、照片等附件）：
+
 ```css
-border: 1px solid #D1D5DB;
-color: #6B7280;
+border: 1px solid #d1d5db;
+color: #6b7280;
 /* hover */
-border-color: #9CA3AF;
+border-color: #9ca3af;
 color: #374151;
 ```
 
 **停用按鈕**（整理中、Coming soon）：
+
 ```css
-border: 1px solid #E5E7EB;
-color: #D1D5DB;
+border: 1px solid #e5e7eb;
+color: #d1d5db;
 cursor: default;
 pointer-events: none;
 ```
