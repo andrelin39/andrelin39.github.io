@@ -72,7 +72,29 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/sharing/";
           },
-        },{id: "post-研究工作流與-claude-code-skill-設計-討論記錄",
+        },{id: "post-我現在看到的-不是故事的全部-從約伯記看苦難-選擇與神的公義",
+        
+          title: "我現在看到的，不是故事的全部——從約伯記看苦難、選擇與神的公義",
+        
+        description: "《約伯記》探討信仰中最古老也最困難的問題：如果神是公義、慈愛而全能的，為什麼義人也會受苦？從約伯與三個朋友的對話，到尼腓二書的對立與選擇權，再到基督的贖罪，重新思考苦難與信心的意義。",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/not-the-whole-story-book-of-job/";
+          
+        },
+      },{id: "post-ai時代的研究心法-從-找文獻的人-轉變成-定義問題的人",
+        
+          title: "AI時代的研究心法：從「找文獻的人」轉變成「定義問題的人」",
+        
+        description: "研究者的核心價值正在轉變——不再是誰能找到最多文獻，而是誰能在龐大的知識海洋中，快速定義一個值得回答的問題，並建構出具說服力的研究故事。",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/ai-era-research-methodology/";
+          
+        },
+      },{id: "post-研究工作流與-claude-code-skill-設計-討論記錄",
         
           title: "研究工作流與 Claude Code Skill 設計：討論記錄",
         
