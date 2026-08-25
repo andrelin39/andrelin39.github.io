@@ -22,11 +22,11 @@
 
 ### 三種分類
 
-| 分類值 | 中文名稱 | 頁面 |
-|--------|---------|------|
-| `notes` | 學習筆記 | /notes/ |
+| 分類值     | 中文名稱 | 頁面       |
+| ---------- | -------- | ---------- |
+| `notes`    | 學習筆記 | /notes/    |
 | `thoughts` | 心情隨想 | /thoughts/ |
-| `sharing` | 文章分享 | /sharing/ |
+| `sharing`  | 文章分享 | /sharing/  |
 
 ### 步驟
 
@@ -47,10 +47,9 @@ title: 文章標題（中英文皆可）
 date: 2026-06-15 08:00:00 +0800
 description: 一句話摘要，顯示在文章列表頁
 tags: 標籤1 標籤2
-categories: notes          # 三選一：notes / thoughts / sharing
-featured: false            # true = 顯示在首頁精選區
+categories: notes # 三選一：notes / thoughts / sharing
+featured: false # true = 顯示在首頁精選區
 ---
-
 正文從這裡開始，支援 Markdown 語法。
 ```
 
@@ -117,15 +116,15 @@ assets/pdf/teaching/biostatistics/ch03_hypothesis_testing.pdf
 
 各課程資料夾對應：
 
-| 課程 | 資料夾 |
-|------|--------|
-| 生物統計學 | `assets/pdf/teaching/biostatistics/` |
-| 醫護文獻選讀 | `assets/pdf/teaching/nursing_literature/` |
-| 教學原理 | `assets/pdf/teaching/pedagogy/` |
-| 醫療經濟學 | `assets/pdf/teaching/health_economics/` |
-| 大數據視覺化分析 | `assets/pdf/teaching/bigdata_viz/` |
-| 機器學習 | `assets/pdf/teaching/machine_learning/` |
-| AI 工具應用 | `assets/pdf/teaching/ai_tools/` |
+| 課程             | 資料夾                                    |
+| ---------------- | ----------------------------------------- |
+| 生物統計學       | `assets/pdf/teaching/biostatistics/`      |
+| 醫護文獻選讀     | `assets/pdf/teaching/nursing_literature/` |
+| 教學原理         | `assets/pdf/teaching/pedagogy/`           |
+| 醫療經濟學       | `assets/pdf/teaching/health_economics/`   |
+| 大數據視覺化分析 | `assets/pdf/teaching/bigdata_viz/`        |
+| 機器學習         | `assets/pdf/teaching/machine_learning/`   |
+| AI 工具應用      | `assets/pdf/teaching/ai_tools/`           |
 
 **Step 2：在對應的 `_projects/teaching_*.md` 加入表格列**
 
@@ -136,8 +135,7 @@ assets/pdf/teaching/biostatistics/ch03_hypothesis_testing.pdf
   <td>Week 03</td>
   <td>假說檢定</td>
   <td>📄 投影片</td>
-  <td><a href="/assets/pdf/teaching/biostatistics/ch03_hypothesis_testing.pdf"
-     target="_blank">下載 PDF</a></td>
+  <td><a href="/assets/pdf/teaching/biostatistics/ch03_hypothesis_testing.pdf" target="_blank">下載 PDF</a></td>
 </tr>
 ```
 
@@ -150,8 +148,8 @@ assets/pdf/teaching/biostatistics/ch03_hypothesis_testing.pdf
    ```yaml
    title: 新課程名稱
    description: 機構 · 修課對象
-   importance: 8        # 數字越小越靠前
-   category: teaching   # 不可更改
+   importance: 8 # 數字越小越靠前
+   category: teaching # 不可更改
    ```
 3. 修改課程說明正文
 4. [部署](#6-部署commit--push)
@@ -274,6 +272,7 @@ Update CV: add new experience
 ### 7.1 重建 admin/ 資料夾
 
 建立 `admin/index.html`：
+
 ```html
 <!doctype html>
 <html>
@@ -289,6 +288,7 @@ Update CV: add new experience
 ```
 
 建立 `admin/config.yml`（參考 git 歷史紀錄，commit `7e6e45c4`）：
+
 ```bash
 git show 7e6e45c4:admin/config.yml > admin/config.yml
 ```
@@ -320,4 +320,4 @@ git push origin main
 
 ---
 
-*最後更新：2026-05-08*
+_最後更新：2026-05-08_
