@@ -72,7 +72,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/sharing/";
           },
-        },{id: "post-我現在看到的-不是故事的全部-從約伯記看苦難-選擇與神的公義",
+        },{id: "post-聊聊我現在的工作",
+        
+          title: "聊聊我現在的工作",
+        
+        description: "在醫院大數據暨數位 AI 應用中心當研究員，每天到底在做什麼？不是跟 AI 聊天，而是當臨床和數據之間的翻譯官，陪同仁把研究做完、寫成論文發表。",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/what-i-do-at-work/";
+          
+        },
+      },{id: "post-我現在看到的-不是故事的全部-從約伯記看苦難-選擇與神的公義",
         
           title: "我現在看到的，不是故事的全部——從約伯記看苦難、選擇與神的公義",
         
