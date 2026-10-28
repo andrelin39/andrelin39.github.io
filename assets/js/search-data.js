@@ -72,7 +72,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/sharing/";
           },
-        },{id: "post-聊聊我現在的工作",
+        },{id: "post-如何讓-ai-不失智",
+        
+          title: "如何讓 AI 不失智？",
+        
+        description: "讓同一個 AI 自己規劃、執行又驗證，就像球員兼裁判。把 Chat 與 AI agent 的角色拆開，再用 Obsidian 透過 MCP 建立共同的執行紀錄，讓 AI 換了對話也不會從頭失憶。",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/ai-shared-memory-obsidian/";
+          
+        },
+      },{id: "post-聊聊我現在的工作",
         
           title: "聊聊我現在的工作",
         
